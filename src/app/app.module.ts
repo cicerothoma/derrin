@@ -9,10 +9,13 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
+import { HomeComponent } from './pages/home/home.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,8 @@ import { environment } from 'src/environments/environment';
     AngularFirestoreModule,
     AngularFireAnalyticsModule,
     AngularFireStorageModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
