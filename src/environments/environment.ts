@@ -5,14 +5,14 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyBE9Dhrww0vLYzLfYhIg6Ji6q64iEvlfTU",
-    authDomain: "cakesnmore-a856c.firebaseapp.com",
-    databaseURL: "https://cakesnmore-a856c.firebaseio.com",
-    projectId: "cakesnmore-a856c",
-    storageBucket: "cakesnmore-a856c.appspot.com",
-    messagingSenderId: "184022369133",
-    appId: "1:184022369133:web:496db5e56e4a102beb5064",
-    measurementId: "G-7GRYZ09CR1"
+    apiKey: "AIzaSyBBF8e0zWavetyw2O0EjQO99OrLL5BJa9Y",
+    authDomain: "cakenmore-8a1a1.firebaseapp.com",
+    databaseURL: "https://cakenmore-8a1a1.firebaseio.com",
+    projectId: "cakenmore-8a1a1",
+    storageBucket: "cakenmore-8a1a1.appspot.com",
+    messagingSenderId: "295824874607",
+    appId: "1:295824874607:web:50366d21400b8a02d0819a",
+    measurementId: "G-G70K9DDV7J"
   }
 };
 
