@@ -1,1 +1,27 @@
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+        <p>I'm the sidenav</p>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+
+        <mat-toolbar>
+            
+           <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+           <div>LOGO</div>
+
+           <div>
+               <a routerLink="/home">Home</a>
+               <a routerLink="/services">Services</a>
+               <a routerLink="/promos">Promos</a>
+           </div>
+
+        </mat-toolbar>
+
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
