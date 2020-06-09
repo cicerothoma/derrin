@@ -1,19 +1,52 @@
 <mat-sidenav-container>
-    <mat-sidenav #sidenav role="navigation">
-        <p>I'm the sidenav</p>
+    <mat-sidenav #sidenav role="navigation" class="sidenav">
+        <mat-nav-list>
+
+            <mat-list-item>
+                <a (click)="sidenav.close()" matLine routerLink="/home" routerLinkActive="active">
+                    <button mat-icon-button>
+                        <mat-icon class="side-icon">home</mat-icon>
+                    </button>
+                    Home
+                </a>
+            </mat-list-item>
+
+            <mat-list-item>
+                <a (click)="sidenav.close()" matLine routerLink="/home" routerLinkActive="active">
+                    <button mat-icon-button>
+                        <mat-icon class="side-icon">home</mat-icon>
+                    </button>
+                    Services
+                </a>
+            </mat-list-item>
+
+            <mat-list-item>
+                <a (click)="sidenav.close()" matLine routerLink="/home" routerLinkActive="active">
+                    <button mat-icon-button>
+                        <mat-icon class="side-icon">home</mat-icon>
+                    </button>
+                    Promos
+                </a>
+            </mat-list-item>
+
+        </mat-nav-list>    
     </mat-sidenav>
 
     <mat-sidenav-content>
 
-        <mat-toolbar>
+        <mat-toolbar class="toolbar">
             
-           <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-           <div>LOGO</div>
-
-           <div>
-               <a routerLink="/home">Home</a>
-               <a routerLink="/services">Services</a>
-               <a routerLink="/promos">Promos</a>
+            <div class="logo">
+                <mat-icon  class="menu-icon" (click)="sidenav.toggle()" fxHide.gt-xs>menu</mat-icon>
+                <div><a routerLink="/">LOGO</a></div>
+            </div>
+           
+           <div fxHide.xs>
+               <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+                 <li><a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a></li>
+                 <li> <a routerLink="/services" routerLinkActive="active" class="nav-link">Services</a></li>
+                 <li><a routerLink="/promos" routerLinkActive="active" class="nav-link">Promos</a></li>
+               </ul>
            </div>
 
         </mat-toolbar>
