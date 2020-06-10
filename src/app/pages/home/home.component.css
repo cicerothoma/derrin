@@ -50,6 +50,7 @@ header .content img{
 
 #about{
     width: 100%;
+    margin-bottom: 4.5rem;
 }
 
 #about .flexDiv{
@@ -85,4 +86,28 @@ header .content img{
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+#services{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.service-con{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.Img img{
+    width: 300px;
+}
+
+#services h1{
+    font-family: 'Great Vibes', cursive;
+    color: var(--brandcolor);
+    font-size: 3.7rem;
 }
