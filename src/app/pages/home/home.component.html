@@ -7,17 +7,36 @@
             <a href="">shop now</a>
         </div>
 
-        <img src="../../../assets/images/header.png" alt="" srcset="">
+        <img src="../../../assets/images/cake1.png" alt="" srcset="">
     </div>
 </header>
 
 <section id="about">
-  <h1>About Us</h1>  
+  <div class="flexDiv">
+    <img src="../../../assets/images/about.png" alt="" srcset="">
+    <div class="writeUp">
+      <h1>About Us</h1>  
 
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-      Deleniti voluptate veritatis debitis est provident. Cupiditate,
-      eveniet error, deleniti aliquam
-    exercitationem, quidem nemo sed voluptatem ab fugiat alias eius! Quaerat, fugit!
- </p>
-  
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+          Deleniti voluptate veritatis debitis est provident. Cupiditate,
+          eveniet error, deleniti aliquam
+        exercitationem, quidem nemo sed voluptatem ab fugiat alias eius! Quaerat, fugit!
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+          Deleniti voluptate veritatis debitis est provident. Cupiditate,
+          eveniet error, deleniti aliquam
+        exercitationem, quidem nemo sed voluptatem ab fugiat alias eius! Quaerat, fugit!
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide><img src="../../../assets/images/cake2.jpg"></ng-template>  
+    <ng-template carouselSlide><img src="../../../assets/images/cake3.jpg"></ng-template>  
+    <ng-template carouselSlide><img src="../../../assets/images/cake4.jpg"></ng-template> 
+    <ng-template carouselSlide><img src="../../../assets/images/cake5.jpg"></ng-template>  
+    <ng-template carouselSlide><img src="../../../assets/images/cake6.jpg"></ng-template>  
+  </owl-carousel-o>
 </section>

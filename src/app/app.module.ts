@@ -18,6 +18,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
+
 
 
 @NgModule({
@@ -41,6 +44,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatListModule,
     MatIconModule,
     MatToolbarModule,
+    CarouselModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
