@@ -24,6 +24,26 @@ a{
     text-decoration: none;
 }
 
+mat-list-item{
+    padding: 5px;
+}
+
+mat-list-item a{
+    
+    color: #fff;
+    margin: 0;
+    font-weight: normal;
+    font-size: inherit;
+    margin-bottom: 0;
+    align-items: center;
+   
+}
+
+.active{
+    background: var(--brandcolor);
+    padding: 5px;
+}
+
 .navigation-items a{
     color: #000;
     font-family: 'Montserrat', sans-serif;

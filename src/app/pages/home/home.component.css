@@ -7,6 +7,7 @@ header .content{
     display: flex;
     justify-content: space-around;
     padding: 80px 5px;
+    flex-wrap: wrap;
 }
 
 header .writeUp{
@@ -56,6 +57,7 @@ header .content img{
 #about .flexDiv{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 #about img{
@@ -65,6 +67,7 @@ header .content img{
 .flexDiv .writeUp{
     width: 43%;
     padding: 30px 5px;
+    order: 2;
 }
 
 .flexDiv .writeUp p{
@@ -110,4 +113,90 @@ header .content img{
     font-family: 'Great Vibes', cursive;
     color: var(--brandcolor);
     font-size: 3.7rem;
+}
+
+.cupcake{
+    margin-top: 25px;
+}
+
+.donut{
+    width: 250px !important;
+    margin-top: 95px;
+}
+
+.cake{
+    width: 320px !important;
+    padding-top: 55px;
+    margin-left: 22px;
+}
+
+.cookey{
+    margin-top: 18px;
+}
+
+.donutP{
+    margin-top: 13px;
+}
+
+#services p{
+    font-family: 'Montserrat', sans-serif;   
+    font-weight: bold;
+}
+
+.service-con p{
+    font-size: 18px;
+    color: var(--brandcolor);
+}
+
+@media(max-width: 520px){
+    header img{
+        width: 100% !important;
+    }
+
+    #about .flexDiv{
+        display: block;
+    }
+
+    #about img{
+        width: 400px;
+    }
+
+    .flexDiv .writeUp{
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .service-con{
+        display: none;
+    }
+
+    header .content{
+        padding-bottom: 0;
+    }
+
+}
+
+@media(min-width: 400px){
+    owl-carousel-o{
+        display: none;
+    }
+
+    .service-con{
+        display: block;
+    }
+}
+
+@media(min-width: 768px){
+    owl-carousel-o{
+        display: none;
+    }
+
+    .service-con{
+        display: flex;
+    }
+
+    .cake{
+        margin-left: 25px;
+    }
 }

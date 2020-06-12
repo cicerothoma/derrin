@@ -18,7 +18,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatCardModule } from "@angular/material/card";
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { PricingComponent } from './pages/pricing/pricing.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 
 
@@ -26,7 +29,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    PricingComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +50,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     MatIconModule,
     MatToolbarModule,
     CarouselModule,
+    MatCardModule
     
   ],
   providers: [],
