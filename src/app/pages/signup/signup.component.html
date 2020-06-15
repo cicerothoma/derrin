@@ -1,0 +1,36 @@
+<form class="move-down">
+    <h2><b>Sign Up</b></h2>
+    <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Full Name</mat-label>
+        <input matInput placeholder="John Doe" formControlName="name" required>
+        <mat-icon matPrefix>person</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="email" required>
+        <mat-icon matPrefix>mail</mat-icon>
+  
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" placeholder="Enter Password" required>
+        <button mat-icon-button matSuffix>
+            <mat-icon>password</mat-icon>
+        </button>
+        <mat-icon matPrefix>enhanced_encryption</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Confirm password</mat-label>
+        <input matInput formControlName="confirmPassword" placeholder="Enter Password" required>
+        <button mat-icon-button matSuffix>
+            <mat-icon>password</mat-icon>
+        </button>
+        <mat-icon matPrefix>enhanced_encryption</mat-icon>
+    </mat-form-field>
+    <button mat-raised-button class="submit-button">Submit</button>
+</form>
+

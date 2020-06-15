@@ -22,7 +22,16 @@ import { MatCardModule } from "@angular/material/card";
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { PricingComponent } from './pages/pricing/pricing.component';
 import { AdminComponent } from './pages/admin/admin.component';
-
+import {MatTabsModule} from '@angular/material/tabs';
+import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from '@angular/forms';
+import {TextFieldModule} from '@angular/cdk/text-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { AddProductComponent } from './pages/add-product/add-product.component';
+import { OrdersComponent } from './pages/orders/orders.component';
+import { LoginComponent } from './pages/login/login.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 
 
@@ -31,7 +40,11 @@ import { AdminComponent } from './pages/admin/admin.component';
     AppComponent,
     HomeComponent,
     PricingComponent,
-    AdminComponent
+    AdminComponent,
+    AddProductComponent,
+    OrdersComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +63,14 @@ import { AdminComponent } from './pages/admin/admin.component';
     MatIconModule,
     MatToolbarModule,
     CarouselModule,
-    MatCardModule
+    MatCardModule,
+    MatTabsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    TextFieldModule,
+    MatInputModule,
+    MatProgressBarModule
+
     
   ],
   providers: [],

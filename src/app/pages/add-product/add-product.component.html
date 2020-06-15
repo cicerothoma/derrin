@@ -1,0 +1,18 @@
+<form>
+
+    <h2><b>Add New Product</b></h2>
+
+    <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Enter Product Name</mat-label>
+        <input matInput placeholder="Product Name Title" formControlName="title" required>
+        <mat-icon matPrefix>create</mat-icon>
+    
+    </mat-form-field>
+            
+    <input type="file" formControlName="file"  id="file" accept="image/*,video/*" required>
+    <mat-progress-bar mode="determinate" class="progress-bar"></mat-progress-bar>
+
+<button mat-raised-button><mat-icon>create</mat-icon>Create</button>
+
+</form>
+

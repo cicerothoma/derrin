@@ -2,8 +2,8 @@
     <mat-sidenav #sidenav role="navigation" class="sidenav">
         <mat-nav-list>
 
-            <mat-list-item>
-                <a (click)="sidenav.close()" matLine routerLink="/home" routerLinkActive="active">
+            <mat-list-item class="side-list">
+                <a (click)="sidenav.close()" matLine routerLink="/home" routerLinkActive="side-active">
                     <button mat-icon-button>
                         <mat-icon class="side-icon">home</mat-icon>
                     </button>
@@ -11,8 +11,8 @@
                 </a>
             </mat-list-item>
 
-            <mat-list-item>
-                <a (click)="sidenav.close()" matLine routerLink="/pricing" routerLinkActive="active">
+            <mat-list-item class="side-list">
+                <a (click)="sidenav.close()" matLine routerLink="/pricing" routerLinkActive="side-active">
                     <button mat-icon-button>
                         <mat-icon class="side-icon">home</mat-icon>
                     </button>
@@ -20,12 +20,12 @@
                 </a>
             </mat-list-item>
 
-            <mat-list-item>
-                <a (click)="sidenav.close()" matLine routerLink="/home" routerLinkActive="active">
+            <mat-list-item class="side-list">
+                <a (click)="sidenav.close()" matLine routerLink="/admin" routerLinkActive="side-active">
                     <button mat-icon-button>
                         <mat-icon class="side-icon">home</mat-icon>
                     </button>
-                    Promos
+                    Admin
                 </a>
             </mat-list-item>
 

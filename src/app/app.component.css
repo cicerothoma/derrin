@@ -25,23 +25,29 @@ a{
 }
 
 mat-list-item{
-    padding: 5px;
+    /* padding: 5px; */
+    position: relative;
 }
 
-mat-list-item a{
+.side-list a{
     
-    color: #fff;
+    color: var(--brandcolor);
     margin: 0;
     font-weight: normal;
     font-size: inherit;
-    margin-bottom: 0;
+    /* padding: 5px; */
     align-items: center;
-   
+    padding-bottom: 10px;
+
 }
 
-.active{
+.side-list a:active{
+    color: #fff;
+}
+
+.side-active{
     background: var(--brandcolor);
-    padding: 5px;
+    color: #fff !important;
 }
 
 .navigation-items a{
@@ -65,6 +71,10 @@ mat-list-item a{
     cursor: pointer;
 }
 
+.side-icon:active{
+    color: #fff;  
+  }
+
 .active {
     text-decoration: none;
    
@@ -82,4 +92,29 @@ mat-list-item a{
 
 .sidebar{
     position: fixed;
+}
+
+.side-icon{
+    color: var(--brandcolor);
+    background: none;
+    position: relative;
+    top: 5px;
+}
+
+.sidenav button{
+    background-color: transparent;
+    border: none;
+}
+
+@media(max-width: 420px){
+    mat-toolbar{
+        padding: 10px;  
+        box-sizing: border-box;
+        justify-content: space-around;
+        text-align: center;
+    }
+    
+    .menu-icon{
+        order: 2;
+    }
 }

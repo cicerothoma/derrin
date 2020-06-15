@@ -1,0 +1,72 @@
+.move-down { 
+    margin: 5rem auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mat-drawer-container {
+    background-color: #fff;
+    color: rgba(0,0,0,.87);
+  }
+  
+  form{
+    max-width: 350px;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    padding: 35px 35px 65px 35px;
+    box-sizing: border-box;
+  }
+  
+  form input, .form-field{
+    display: block;
+  }
+  
+  .submit-button{
+    background: var(--brandcolor);
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+  }
+  
+  .password-link{
+    display: block;
+    text-align: end;
+    text-decoration: none;
+    color: #1ca5e6;
+    margin: 5px;
+  }
+  
+  .fa-icon{
+    margin-right: 5px;
+  }
+  
+  button{
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  button:focus{
+      outline: none;
+  }
+  
+  img{
+    height: 60px;
+    width: 60px;
+  }
+  
+  @media (max-width: 420px){
+    form{
+      width: 84%;
+      padding: 15px 20px;
+    }
+  
+    .move-down{
+      margin-top: 5rem;
+    }
+  
+    button{
+      font-size: 3vw;
+    }
+  }
+  
