@@ -1,4 +1,4 @@
-<form class="move-down">
+<form class="move-down" [formGroup]="signUpForm">
     <h2><b>Sign Up</b></h2>
     <mat-form-field appearance="fill" class="form-field">
         <mat-label>Full Name</mat-label>
@@ -31,6 +31,6 @@
         </button>
         <mat-icon matPrefix>enhanced_encryption</mat-icon>
     </mat-form-field>
-    <button mat-raised-button class="submit-button">Submit</button>
+    <button mat-raised-button class="submit-button" (click)="register()">Submit</button>
 </form>
 

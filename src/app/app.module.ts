@@ -32,6 +32,7 @@ import { AddProductComponent } from './pages/add-product/add-product.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 
@@ -69,8 +70,8 @@ import { SignupComponent } from './pages/signup/signup.component';
     ReactiveFormsModule,
     TextFieldModule,
     MatInputModule,
-    MatProgressBarModule
-
+    MatProgressBarModule,
+    MatSnackBarModule
     
   ],
   providers: [],
