@@ -1,17 +1,18 @@
-<form class="move-down">
+<form class="move-down" [formGroup]="loginForm">
    
     <h2>Login</h2>
     <mat-form-field appearance="fill" class="form-field">
         <mat-label>Enter your email</mat-label>
-        <input matInput formControlName="email" placeholder="pat@example.com" required>
+        <input matInput type="text" formControlName="email" placeholder="pat@example.com" required>
         <mat-icon matPrefix>mail</mat-icon>
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="form-field">
         <mat-label>Password</mat-label>
-        <input matInput formControlName="password" required>
-        <button mat-icon-button matSuffix [attr.arial-label]="'Hide Password'">
-            <mat-icon>password</mat-icon>
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.arial-label]="'Hide Password'"
+        [attr.aria.pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
         <mat-icon matPrefix>enhanced_encryption</mat-icon>
 
@@ -22,30 +23,15 @@
         <div class="example-button-row">
             <div>
                 <button mat-raised-button color="primary">
-                    <fa-icon class="fa-icon"></fa-icon>LOGIN WITH FACEBOOK
+                    <fa-icon class="fa-icon" [icon]="faFacebook"></fa-icon>LOGIN WITH FACEBOOK
                 </button>
                 <button mat-raised-button color="warn">
-                    <fa-icon class="fa-icon" ></fa-icon>LOGIN WITH GOOGLE
+                    <fa-icon class="fa-icon" [icon]="faGoogle"></fa-icon>LOGIN WITH GOOGLE
                 </button>
             </div>
-            <ng-template #socialLogin>
-                <button mat-raised-button color="primary">
-                    <fa-icon class="fa-icon"></fa-icon>LOGIN WITH FACEBOOK
-                </button>
-                <button mat-raised-button color="warn">
-                    <fa-icon class="fa-icon"></fa-icon>LOGIN WITH GOOGLE
-                </button>
-            </ng-template>
         </div>
     </section>
 
-    <a routerLink="/forgot-password" class="password-link">Forgot Password?</a>
+    <button mat-raised-button class="submit-button" (click)="login()">Login</button>
 
-    <button mat-raised-button
-         class="submit-button">Login</button>
-    <ng-template #justLogin>
-        <button mat-raised-button class="submit-button">Login</button>
-    </ng-template>
-
-    <a routerLink="/register" class="password-link">Don't have an account? Create one</a>
 </form>
