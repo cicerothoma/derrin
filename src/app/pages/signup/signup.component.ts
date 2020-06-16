@@ -13,6 +13,8 @@ import { Router } from '@angular/router';
 export class SignupComponent implements OnInit {
 
   signUpForm: FormGroup
+  hide: boolean = true;
+  hide2: boolean = true;
 
   constructor(private fb: FormBuilder, 
     private authService: AuthService, 
