@@ -4,6 +4,8 @@ import { UserService } from './user.service';
 import { IUser } from '../model/iUser';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +40,34 @@ export class AuthService {
       if (userClaims.claims.admin) {
         this.router.navigate(['/admin'])
       }
+    } catch (error) {
+      this.matSnackBar.open(error.message, 'Close', {
+        duration: 6000
+      })
+    }
+  }
+
+  async googleLogin() {
+    try {
+      const user = await this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+      const userId = user.user.uid;
+      const userName = user.user.displayName;
+      const userEmail = user.user.email;
+      const userPhotoUrl = user.user.photoURL
+      if (user.additionalUserInfo.isNewUser) {
+        this.userService.addUser(userId, {
+          name: userName,
+          email: userEmail,
+          imageUrl: userPhotoUrl
+        })
+      }
+
+      const userClaims = await user.user.getIdTokenResult();
+      if (userClaims.claims.admin) {
+        this.router.navigate(['/admin'])
+      }
+      
+      return user
     } catch (error) {
       this.matSnackBar.open(error.message, 'Close', {
         duration: 6000
