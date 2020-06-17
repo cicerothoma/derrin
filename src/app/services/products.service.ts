@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection, DocumentReference } from '@angular/fire/firestore';
 import { IProduct } from '../model/iProduct';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -31,6 +31,10 @@ export class ProductsService {
 
   getProduct(id: string): Observable<IProduct> {
     return this.productsCollection.doc<IProduct>(id).valueChanges()
+  }
+  
+  addProduct(data: IProduct): Promise<DocumentReference> {
+    return this.productsCollection.add(data)
   }
 
   updateProduct(id: string, data: Partial<IProduct>): Promise<void> {

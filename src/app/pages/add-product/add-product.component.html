@@ -4,12 +4,24 @@
 
     <mat-form-field appearance="fill" class="form-field">
         <mat-label>Enter Product Name</mat-label>
-        <input matInput placeholder="Product Name Title" formControlName="title" required>
+        <input matInput placeholder="Product Name" formControlName="productName" required>
+        <mat-icon matPrefix>create</mat-icon>
+    
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Enter Product Name</mat-label>
+        <input matInput placeholder="Product Price" formControlName="productPrice" required>
+        <mat-icon matPrefix>create</mat-icon>
+    
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Enter Product Name</mat-label>
+        <input matInput placeholder="Product Description" formControlName="productDescription" required>
         <mat-icon matPrefix>create</mat-icon>
     
     </mat-form-field>
             
-    <input type="file" formControlName="file"  id="file" accept="image/*,video/*" required>
+    <input type="file" formControlName="fakeFilePath"  id="file" accept="image/*" required>
     <mat-progress-bar mode="determinate" class="progress-bar"></mat-progress-bar>
 
 <button mat-raised-button><mat-icon>create</mat-icon>Create</button>
