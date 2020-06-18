@@ -1,4 +1,38 @@
-<img [src]="data.productImageUrl" alt="Product Image">
-<h1>{{data.productName}}</h1>
-<h2>{{data.productPrice}}</h2>
-<h2>{{data.productDescription}}</h2>
+<div class="order">
+    <img [src]="data.productImageUrl" class="productImg" alt="Product Image">
+    <h1><b>{{data.productName}}</b></h1>
+    <h2 class="price">₦{{data.productPrice}}</h2>
+
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input matInput type="text" placeholder="Enter Name">
+          <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+        </mat-form-field>
+      
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" placeholder="Enter Email">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Phone Number</mat-label>
+            <span matPrefix>+234 &nbsp;</span>
+            <input type="tel" matInput placeholder="813-859-1185">
+            <mat-icon matSuffix>phone</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Quantity</mat-label>
+            <input type="number" matInput placeholder="Enter Quantity">
+          </mat-form-field>
+
+          <button mat-button [mat-dialog-close]="true" type="submit" cdkFocusInitial>Confirm Order</button>
+      </form>
+      
+    <!-- <button>Check Out</button> -->
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Cancel</button>
+        
+    </div>
+</div>

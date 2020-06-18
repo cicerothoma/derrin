@@ -72,8 +72,13 @@ img{
     color: #fff;
     width: 70%;
     margin: 0 auto;
-    padding: 5px 15px;
+    padding: 7px 15px;
     border-radius: 15px;
+    border: none;
 
+}
+
+button:focus{
+    outline: none;
 }
 
