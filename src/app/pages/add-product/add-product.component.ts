@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { ProductsService } from 'src/app/services/products.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { AngularFireStorage } from '@angular/fire/storage';
+import { AngularFireStorage, AngularFireStorageReference, AngularFireUploadTask } from '@angular/fire/storage';
+import { Observable } from 'rxjs';
+import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-add-product',
@@ -11,7 +13,9 @@ import { AngularFireStorage } from '@angular/fire/storage';
 })
 export class AddProductComponent implements OnInit {
 
-  productForm: FormGroup
+  productForm: FormGroup;
+  uploadPercent: Observable<number>;
+  downloadURL: Observable<string>;
 
   constructor(private fb: FormBuilder, 
     private productService: ProductsService, 
@@ -30,7 +34,17 @@ export class AddProductComponent implements OnInit {
   }
 
   fileUpload(event) {
-    console.log(event.target.files[0])
+    const { productName } = this.productForm.value; 
+    const file = event.target.files[0];
+    const filePath: string = `productImages/${productName}`;
+    const fileRef: AngularFireStorageReference = this.afStorage.ref(filePath);
+    const task: AngularFireUploadTask = this.afStorage.upload(filePath, file);
+
+    this.uploadPercent = task.percentageChanges();
+
+    task.snapshotChanges().pipe(
+      finalize(() => this.downloadURL = fileRef.getDownloadURL())
+    ).subscribe()
   }
 
   async submit(): Promise<void> {

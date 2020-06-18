@@ -33,8 +33,9 @@ export class SignupComponent implements OnInit {
 
   async register() {
     try {
-      const email: string = this.signUpForm.get('email').value;
-      const password: string = this.signUpForm.get('password').value;
+      // const email: string = this.signUpForm.get('email').value;
+      // const password: string = this.signUpForm.get('password').value;
+      const { email, password } = this.signUpForm.value;
       const userData: IUser = {
         name: this.signUpForm.get('name').value,
         email: email
