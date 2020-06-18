@@ -64,7 +64,7 @@ img{
     font-family: 'Montserrat', sans-serif; 
 }
 
-.content a {
+.content button {
     text-decoration: none;
     display: block;
     background: var(--brandcolor);

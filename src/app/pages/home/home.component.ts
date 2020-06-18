@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   customOptions: any = {
     loop: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
     dots: false,
     navSpeed: 700,
     navText: ['', ''],
@@ -28,7 +28,8 @@ export class HomeComponent implements OnInit {
         items: 4
       }
     },
-    nav: true
+    nav: true,
+    autoplay: true,
   }
 
 
