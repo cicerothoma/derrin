@@ -26,7 +26,6 @@ export class AddProductComponent implements OnInit {
       productPrice: ['', Validators.required],
       productDescription: ['', Validators.required],
       productImageUrl: ['', Validators.required],
-      fakeFilePath: ['', Validators.required]
     })
    }
 
@@ -43,13 +42,24 @@ export class AddProductComponent implements OnInit {
     this.uploadPercent = task.percentageChanges();
 
     task.snapshotChanges().pipe(
-      finalize(() => this.downloadURL = fileRef.getDownloadURL())
+      finalize(() => {
+        this.downloadURL = fileRef.getDownloadURL();
+        this.downloadURL.subscribe(url => {
+          this.productForm.get('productImageUrl').patchValue(url)
+        })
+      })
     ).subscribe()
   }
 
   async submit(): Promise<void> {
     if (this.productForm.valid) {
       await this.productService.addProduct(this.productForm.value);
+      this.productForm.reset({
+        productName: '',
+        productPrice: '',
+        productDescription: '',
+        productImageUrl: ''
+      })
       this.matSnackBar.open('Product Added!!', 'Close', {
         duration: 3000
       })

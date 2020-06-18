@@ -4,5 +4,4 @@ export interface IProduct {
     productPrice: number;
     productImageUrl: string;
     productDescription?: string;
-    fakeFilePath: string;
 }

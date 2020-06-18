@@ -33,6 +33,7 @@ import { OrdersComponent } from './pages/orders/orders.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { OrderModalComponent } from './pages/order-modal/order-modal.component';
 
 
 
@@ -45,7 +46,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     AddProductComponent,
     OrdersComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    OrderModalComponent
   ],
   imports: [
     BrowserModule,
