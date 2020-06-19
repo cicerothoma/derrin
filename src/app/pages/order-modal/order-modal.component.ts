@@ -27,8 +27,8 @@ export class OrderModalComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getErrorMessage() {
-    return this.orderForm.hasError('required') ? 'You must enter a value' : '';
+  getErrorMessage(formControlName) {
+    return this.orderForm.get(formControlName).hasError('required') ? 'You must enter a value' : '';
   }
 
   onNoClick(): void {

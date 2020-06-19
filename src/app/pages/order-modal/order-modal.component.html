@@ -8,20 +8,20 @@
         <mat-form-field class="example-full-width">
           <mat-label>Name</mat-label>
           <input matInput type="text" formControlName="name" placeholder="Enter Fullname">
-          <mat-error *ngIf="orderForm.invalid">{{getErrorMessage()}}</mat-error>
+          <mat-error *ngIf="orderForm.get('name').invalid">{{getErrorMessage('name')}}</mat-error>
         </mat-form-field>
       
         <mat-form-field class="example-full-width">
             <mat-label>Phone Number</mat-label>
             <input type="tel" formControlName="phone" matInput placeholder="0815-555-8888">
             <mat-icon matSuffix>phone</mat-icon>
-            <mat-error *ngIf="orderForm.invalid">{{getErrorMessage()}}</mat-error>
+            <mat-error *ngIf="orderForm.get('phone').invalid">{{getErrorMessage('phone')}}</mat-error>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
             <mat-label>Quantity</mat-label>
             <input type="number" formControlName="quantity" (keyup)="updatePrice()" matInput placeholder="Enter Quantity">
-            <mat-error *ngIf="orderForm.invalid">{{getErrorMessage()}}</mat-error>
+            <mat-error *ngIf="orderForm.get('quantity').invalid">{{getErrorMessage('quantity')}}</mat-error>
         </mat-form-field>
 
         </form>
