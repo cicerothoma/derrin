@@ -61,6 +61,12 @@ export class OrderModalComponent implements OnInit {
           product: this.data
         }
         await this.orderService.addOrder(this.userOrder);
+        this.orderForm.reset({
+          name: '',
+          phone: '',
+          quantity: ''
+        })
+        this.dialogRef.close();
         this.matSnackbar.open(`Your Order Has Been Sent And we will get back to you as soon as possible`, 'Close', {
           duration: 6000
         })
