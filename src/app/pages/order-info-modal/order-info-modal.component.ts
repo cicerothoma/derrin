@@ -19,4 +19,8 @@ export class OrderInfoModalComponent implements OnInit {
     this.dialogRef.close();
   }
 
+  call(): void{
+    window.location.href = `tel:${this.data.phone}`
+  }
+
 }

@@ -1,2 +1,20 @@
-<img [src]="data.product.productImageUrl" alt="Product Image">
-<h2>{{data.name}}</h2>
+<div class="wrapper">
+    <div>
+        <h2>Product Ordered</h2>
+        <div class="imageDiv"><img [src]="data.product.productImageUrl" alt="Product Image"></div>
+        <h2>{{data.product.productName}}</h2>
+        <h2><b>Unit Price</b>: {{data.product.productPrice}}</h2>
+        <h2>{{data.product.productDescription}}</h2>
+    </div>
+    <h2><b>Ordered By</b>:  {{data.name}}</h2>
+    <h2><b>Contact Number</b>:  {{data.phone}}</h2>
+    <h2><b>Order Date & Time</b>:  {{data.date | date:'medium'}}</h2>
+    <h2><b>Order Total Price</b>: {{data.price}}</h2>
+    
+    <div mat-dialog-actions>
+        <button mat-button (click)="onNoClick()">Cancel</button>
+        <button mat-button (click)="call()" cdkFocusInitial>Call Client</button>
+      
+    </div>
+</div>
+

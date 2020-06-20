@@ -36,6 +36,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { OrderModalComponent } from './pages/order-modal/order-modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { OrderInfoModalComponent } from './pages/order-info-modal/order-info-modal.component';
+import { ProductListingComponent } from './pages/product-listing/product-listing.component';
 
 
 
@@ -50,7 +51,8 @@ import { OrderInfoModalComponent } from './pages/order-info-modal/order-info-mod
     LoginComponent,
     SignupComponent,
     OrderModalComponent,
-    OrderInfoModalComponent
+    OrderInfoModalComponent,
+    ProductListingComponent
   ],
   imports: [
     BrowserModule,
