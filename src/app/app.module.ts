@@ -38,6 +38,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { OrderInfoModalComponent } from './pages/order-info-modal/order-info-modal.component';
 import { ProductListingComponent } from './pages/product-listing/product-listing.component';
 import { UpdateProductModalComponent } from './pages/update-product-modal/update-product-modal.component';
+import { PromosComponent } from './pages/promos/promos.component';
+import { AddPromoModalComponent } from './pages/add-promo-modal/add-promo-modal.component';
 
 
 
@@ -54,7 +56,9 @@ import { UpdateProductModalComponent } from './pages/update-product-modal/update
     OrderModalComponent,
     OrderInfoModalComponent,
     ProductListingComponent,
-    UpdateProductModalComponent
+    UpdateProductModalComponent,
+    PromosComponent,
+    AddPromoModalComponent
   ],
   imports: [
     BrowserModule,
