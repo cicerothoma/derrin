@@ -4,7 +4,7 @@
       <div mat-line>{{ order.name }}</div>
       <div mat-line> {{ order.phone }} </div>
       <div mat-line> {{ order.date | date:'medium' }} </div>
-      <button mat-icon-button>
+      <button mat-icon-button (click)="openDialog(order)">
         <mat-icon matSuffix>edit</mat-icon>
       </button>
       <button mat-icon-button (click)="delete(order.id)">
