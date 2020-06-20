@@ -40,6 +40,7 @@ import { ProductListingComponent } from './pages/product-listing/product-listing
 import { UpdateProductModalComponent } from './pages/update-product-modal/update-product-modal.component';
 import { PromosComponent } from './pages/promos/promos.component';
 import { AddPromoModalComponent } from './pages/add-promo-modal/add-promo-modal.component';
+import { MessageComponent } from './pages/message/message.component';
 
 
 
@@ -58,7 +59,8 @@ import { AddPromoModalComponent } from './pages/add-promo-modal/add-promo-modal.
     ProductListingComponent,
     UpdateProductModalComponent,
     PromosComponent,
-    AddPromoModalComponent
+    AddPromoModalComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
