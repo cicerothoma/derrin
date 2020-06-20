@@ -37,6 +37,7 @@ import { OrderModalComponent } from './pages/order-modal/order-modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { OrderInfoModalComponent } from './pages/order-info-modal/order-info-modal.component';
 import { ProductListingComponent } from './pages/product-listing/product-listing.component';
+import { UpdateProductModalComponent } from './pages/update-product-modal/update-product-modal.component';
 
 
 
@@ -52,7 +53,8 @@ import { ProductListingComponent } from './pages/product-listing/product-listing
     SignupComponent,
     OrderModalComponent,
     OrderInfoModalComponent,
-    ProductListingComponent
+    ProductListingComponent,
+    UpdateProductModalComponent
   ],
   imports: [
     BrowserModule,

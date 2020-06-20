@@ -2,14 +2,14 @@
     <div>
         <h2>Product Ordered</h2>
         <div class="imageDiv"><img [src]="data.product.productImageUrl" alt="Product Image"></div>
-        <h2>{{data.product.productName}}</h2>
-        <h2><b>Unit Price</b>: {{data.product.productPrice}}</h2>
-        <h2>{{data.product.productDescription}}</h2>
+        <h3><b>Name</b>:{{data.product.productName}}</h3>
+        <h3><b>Unit Price</b>: {{data.product.productPrice}}</h3>
+        <h3>{{data.product.productDescription}}</h3>
     </div>
-    <h2><b>Ordered By</b>:  {{data.name}}</h2>
-    <h2><b>Contact Number</b>:  {{data.phone}}</h2>
-    <h2><b>Order Date & Time</b>:  {{data.date | date:'medium'}}</h2>
-    <h2><b>Order Total Price</b>: {{data.price}}</h2>
+    <h3><b>Ordered By</b>:  {{data.name}}</h3>
+    <h3><b>Contact Number</b>:  {{data.phone}}</h3>
+    <h3><b>Order Date & Time</b>:  {{data.date | date:'medium'}}</h3>
+    <h3><b>Order Total Price</b>: {{data.price}}</h3>
     
     <div mat-dialog-actions>
         <button mat-button (click)="onNoClick()">Cancel</button>
