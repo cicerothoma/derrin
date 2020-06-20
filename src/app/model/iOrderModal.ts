@@ -7,4 +7,5 @@ export interface IOrderModal {
     quantity: number;
     product: IProduct;
     price: number;
+    date: number;
 }

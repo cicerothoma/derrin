@@ -35,6 +35,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { OrderModalComponent } from './pages/order-modal/order-modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { OrderInfoModalComponent } from './pages/order-info-modal/order-info-modal.component';
 
 
 
@@ -48,7 +49,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     OrdersComponent,
     LoginComponent,
     SignupComponent,
-    OrderModalComponent
+    OrderModalComponent,
+    OrderInfoModalComponent
   ],
   imports: [
     BrowserModule,
@@ -78,7 +80,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatDialogModule
   ],
   entryComponents: [
-    OrderModalComponent
+    OrderModalComponent,
+    OrderInfoModalComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

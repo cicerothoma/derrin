@@ -1,57 +1,13 @@
-<mat-list>
+<mat-list *ngFor="let order of (orders | async)">
     <mat-list-item>
-      <img  mat-list-avatar src="../../../assets/images/cake10.jpg" alt="Post Image">
-      <div mat-line>Post Title</div>
-      <div mat-line> 2 days ago </div>
+      <img  mat-list-avatar [src]="order.product.productImageUrl" alt="Product Image">
+      <div mat-line>{{ order.name }}</div>
+      <div mat-line> {{ order.phone }} </div>
+      <div mat-line> {{ order.date | date:'medium' }} </div>
       <button mat-icon-button>
         <mat-icon matSuffix>edit</mat-icon>
       </button>
-      <button mat-icon-button>
-        <mat-icon matSuffix>delete</mat-icon>
-      </button>
-      <mat-divider></mat-divider>
-    </mat-list-item>
-</mat-list>
-
-<mat-list>
-    <mat-list-item>
-      <img  mat-list-avatar src="../../../assets/images/cake11.jpg" alt="Post Image">
-      <div mat-line>Post Title</div>
-      <div mat-line> 2 days ago </div>
-      <button mat-icon-button>
-        <mat-icon matSuffix>edit</mat-icon>
-      </button>
-      <button mat-icon-button>
-        <mat-icon matSuffix>delete</mat-icon>
-      </button>
-      <mat-divider></mat-divider>
-    </mat-list-item>
-</mat-list>
-
-<mat-list>
-    <mat-list-item>
-      <img  mat-list-avatar src="../../../assets/images/cake12.jpg" alt="Post Image">
-      <div mat-line>Post Title</div>
-      <div mat-line> 2 days ago </div>
-      <button mat-icon-button>
-        <mat-icon matSuffix>edit</mat-icon>
-      </button>
-      <button mat-icon-button>
-        <mat-icon matSuffix>delete</mat-icon>
-      </button>
-      <mat-divider></mat-divider>
-    </mat-list-item>
-</mat-list>
-
-<mat-list>
-    <mat-list-item>
-      <img  mat-list-avatar src="../../../assets/images/cake13.jpg" alt="Post Image">
-      <div mat-line>Post Title</div>
-      <div mat-line> 2 days ago </div>
-      <button mat-icon-button>
-        <mat-icon matSuffix>edit</mat-icon>
-      </button>
-      <button mat-icon-button>
+      <button mat-icon-button (click)="delete(order.id)">
         <mat-icon matSuffix>delete</mat-icon>
       </button>
       <mat-divider></mat-divider>

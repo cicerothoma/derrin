@@ -58,7 +58,8 @@ export class OrderModalComponent implements OnInit {
           phone: phone,
           quantity: quantity,
           price: this.totalPrice,
-          product: this.data
+          product: this.data,
+          date: new Date().getTime()
         }
         await this.orderService.addOrder(this.userOrder);
         this.orderForm.reset({
