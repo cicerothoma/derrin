@@ -2,18 +2,17 @@
     <div>
         <h2>Product Ordered</h2>
         <div class="imageDiv"><img [src]="data.product.productImageUrl" alt="Product Image"></div>
-        <h3><b>Name</b>:{{data.product.productName}}</h3>
-        <h3><b>Unit Price</b>: {{data.product.productPrice}}</h3>
-        <h3>{{data.product.productDescription}}</h3>
+        <h3><b>Name</b>: {{data.product.productName}}</h3>
+        <h3><b>Unit Price: <span class="price">₦{{data.product.productPrice}}</span></b></h3>
     </div>
     <h3><b>Ordered By</b>:  {{data.name}}</h3>
     <h3><b>Contact Number</b>:  {{data.phone}}</h3>
     <h3><b>Order Date & Time</b>:  {{data.date | date:'medium'}}</h3>
-    <h3><b>Order Total Price</b>: {{data.price}}</h3>
+    <h3><b>Order Total Price: <span class="price">₦{{data.price}}</span></b></h3>
     
-    <div mat-dialog-actions>
-        <button mat-button (click)="onNoClick()">Cancel</button>
-        <button mat-button (click)="call()" cdkFocusInitial>Call Client</button>
+    <div mat-dialog-actions class="actions">
+        <button mat-button (click)="onNoClick()"><mat-icon>cancel</mat-icon><span>Cancel</span></button>
+        <button mat-button (click)="call()" cdkFocusInitial><mat-icon>phone</mat-icon> <span>Call Client</span></button>
       
     </div>
 </div>

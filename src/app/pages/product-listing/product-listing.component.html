@@ -1,14 +1,19 @@
 <mat-list *ngFor="let product of (products | async)">
-    <mat-list-item>
+    <mat-list-item class="mat-list">
       <img  mat-list-avatar [src]="product.productImageUrl" alt="Product Image">
       <div mat-line>{{ product.productName }}</div>
       <div mat-line> ₦{{ product.productPrice }} </div>
+
+     <div mat-line class="actions">
       <button mat-icon-button (click)="openDialog(product)">
-        <mat-icon matSuffix>edit</mat-icon>
+        <mat-icon matSuffix>edit</mat-icon><span>Edit</span>
       </button>
       <button mat-icon-button (click)="delete(product.id)">
-        <mat-icon matSuffix>delete</mat-icon>
+        <mat-icon matSuffix>delete</mat-icon><span>Delete</span>
       </button>
+     </div>
+
+
       <mat-divider></mat-divider>
     </mat-list-item>
 </mat-list>

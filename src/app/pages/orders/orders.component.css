@@ -1,0 +1,15 @@
+button{
+    margin-right: 10px;
+    background: rgb(239, 239, 239);
+    border: none;
+    color: var(--brandcolor);
+    font-size: 21px;
+    border-radius: 15px;
+    padding: 3px 12px 1px 12px;
+}
+
+span{
+    position: relative;
+    top: -5px;
+    font-size: 14px;
+}

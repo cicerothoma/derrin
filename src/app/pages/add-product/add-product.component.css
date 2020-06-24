@@ -46,3 +46,13 @@ input[type="file"]::-webkit-file-upload-button{
     margin: 15px auto;
     height: 15px;
 }
+
+.create-icon{
+    font-size: 17px;
+    position: relative;
+    top: 3px;
+}
+
+.form-icon{
+    color: var(--brandcolor);
+}

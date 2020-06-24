@@ -29,6 +29,15 @@
                 </a>
             </mat-list-item>
 
+            <mat-list-item class="side-list">
+                <a (click)="sidenav.close()" matLine routerLink="/promos" routerLinkActive="side-active">
+                    <button mat-icon-button>
+                        <mat-icon class="side-icon">home</mat-icon>
+                    </button>
+                    Promos
+                </a>
+            </mat-list-item>
+
         </mat-nav-list>    
     </mat-sidenav>
 
@@ -44,6 +53,7 @@
                <ul fxLayout fxLayoutGap="10px" class="navigation-items">
                  <li><a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a></li>
                  <li> <a routerLink="/pricing" routerLinkActive="active" class="nav-link">Pricing</a></li>
+                 <li> <a routerLink="/admin" routerLinkActive="active" class="nav-link">Admin</a></li>
                  <li><a routerLink="/promos" routerLinkActive="active" class="nav-link">Promos</a></li>
                </ul>
            </div>

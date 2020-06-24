@@ -41,6 +41,7 @@ import { UpdateProductModalComponent } from './pages/update-product-modal/update
 import { PromosComponent } from './pages/promos/promos.component';
 import { AddPromoModalComponent } from './pages/add-promo-modal/add-promo-modal.component';
 import { MessageComponent } from './pages/message/message.component';
+import { AddPromoComponent } from './pages/add-promo/add-promo.component';
 
 
 
@@ -60,7 +61,8 @@ import { MessageComponent } from './pages/message/message.component';
     UpdateProductModalComponent,
     PromosComponent,
     AddPromoModalComponent,
-    MessageComponent
+    MessageComponent,
+    AddPromoComponent
   ],
   imports: [
     BrowserModule,

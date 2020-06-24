@@ -1,15 +1,21 @@
 <mat-list *ngFor="let order of (orders | async)">
-    <mat-list-item>
+    <mat-list-item class="list-items">
       <img  mat-list-avatar [src]="order.product.productImageUrl" alt="Product Image">
       <div mat-line>{{ order.name }}</div>
       <div mat-line> {{ order.phone }} </div>
       <div mat-line> {{ order.date | date:'medium' }} </div>
-      <button mat-icon-button (click)="openDialog(order)">
-        <mat-icon matSuffix>edit</mat-icon>
-      </button>
-      <button mat-icon-button (click)="delete(order.id)">
-        <mat-icon matSuffix>delete</mat-icon>
-      </button>
+
+      
+       <div mat-line class="actions">
+        <button mat-raised-button (click)="openDialog(order)">
+          <mat-icon class="mat-icon" matSuffix>info</mat-icon><span>Details</span>
+        </button>
+        <button mat-raised-button (click)="delete(order.id)">
+          <mat-icon class="mat-icon" matSuffix>delete</mat-icon><span>Delete</span>
+        </button>
+      
+       </div>
+
       <mat-divider></mat-divider>
     </mat-list-item>
 </mat-list>

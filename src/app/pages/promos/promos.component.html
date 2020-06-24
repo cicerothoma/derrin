@@ -1,3 +1,26 @@
-<p>promos works!</p>
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title class="promo-title">Promo Name</mat-card-title>
+      <mat-card-subtitle>From Date to Date</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+            <mat-icon>delete</mat-icon>
+          </button>
+    </mat-card-actions>
+  </mat-card>
+
+
+
+
+
 
 <button *ngIf="router.url.includes('admin')" (click)="openDialog()">Open Modal</button>

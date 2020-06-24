@@ -1,12 +1,31 @@
-<mat-form-field appearance="fill" class="form-field">
-    <mat-label>Enter Product Name</mat-label>
-    <input matInput type="text" placeholder="Product Name" name="productName" [(ngModel)]="data.productName" required>
-    <mat-icon matPrefix>create</mat-icon>
+<form>
 
-</mat-form-field>
-<div mat-dialog-actions>
-    <button mat-button (click)="onNoClick()">Cancel</button>
-    <button mat-button (click)="update()" cdkFocusInitial>Update Product</button>
-  
-</div>
+    <h2><b>Edit Product</b></h2>
+
+    <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Enter Product Name</mat-label>
+        <input matInput type="text" placeholder="Product Name" formControlName="productName" required>
+        <mat-icon class="form-icon" matPrefix>create</mat-icon>
+    
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Enter Product Price</mat-label>
+        <input matInput type="number" placeholder="Product Price" formControlName="productPrice" required>
+        <mat-icon class="form-icon" matPrefix>local_offer</mat-icon>
+    
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Enter Product Description</mat-label>
+        <input matInput type="text" placeholder="Product Description" formControlName="productDescription" required>
+        <mat-icon class="form-icon" matPrefix>info</mat-icon>
+    
+    </mat-form-field>
+            
+    <input type="file"  id="file" accept="image/*" required>
+    <mat-progress-bar mode="determinate"class="progress-bar"></mat-progress-bar>
+
+<button mat-raised-butto><mat-icon class="create-icon">create</mat-icon>Edit</button>
+
+</form>
+
 
