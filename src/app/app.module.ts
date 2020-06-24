@@ -8,6 +8,7 @@ import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireAuthGuard } from '@angular/fire/auth-guard';
 import { environment } from 'src/environments/environment';
 import { HomeComponent } from './pages/home/home.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -42,6 +43,7 @@ import { PromosComponent } from './pages/promos/promos.component';
 import { AddPromoModalComponent } from './pages/add-promo-modal/add-promo-modal.component';
 import { MessageComponent } from './pages/message/message.component';
 import { AddPromoComponent } from './pages/add-promo/add-promo.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 
 
@@ -62,7 +64,8 @@ import { AddPromoComponent } from './pages/add-promo/add-promo.component';
     PromosComponent,
     AddPromoModalComponent,
     MessageComponent,
-    AddPromoComponent
+    AddPromoComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -95,7 +98,9 @@ import { AddPromoComponent } from './pages/add-promo/add-promo.component';
     OrderModalComponent,
     OrderInfoModalComponent
   ],
-  providers: [],
+  providers: [
+    AngularFireAuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
