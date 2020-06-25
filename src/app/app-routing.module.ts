@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { canActivate, hasCustomClaim } from '@angular/fire/auth-guard';
+import { canActivate, hasCustomClaim, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 import { HomeComponent } from './pages/home/home.component';
 import { PricingComponent } from './pages/pricing/pricing.component';
 import { AdminComponent } from './pages/admin/admin.component';
@@ -11,6 +11,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 
 const adminOnly = () => hasCustomClaim('admin');
+// const redirectToHome = () => redirectUnauthorizedTo(['home'])
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
