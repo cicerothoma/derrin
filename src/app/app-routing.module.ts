@@ -13,16 +13,15 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 const adminOnly = () => hasCustomClaim('admin');
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
-  {path: 'pricing', component: PricingComponent},
-  {path: 'promos', component: PromosComponent},
-  // {path: 'admin', component: AdminComponent, ...canActivate(adminOnly)},
-  {path: 'admin', component: AdminComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'signup', component: SignupComponent},
-  {path: '**', redirectTo: '404', pathMatch: 'full'},
-  {path: '404', component: NotFoundComponent}
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'pricing', component: PricingComponent },
+  { path: 'promos', component: PromosComponent },
+  { path: 'admin', component: AdminComponent, ...canActivate(adminOnly) },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: '**', redirectTo: '404', pathMatch: 'full' },
+  { path: '404', component: NotFoundComponent }
 ];
 
 @NgModule({
