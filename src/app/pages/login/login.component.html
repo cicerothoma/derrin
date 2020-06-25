@@ -10,7 +10,7 @@
     <mat-form-field appearance="fill" class="form-field">
         <mat-label>Password</mat-label>
         <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.arial-label]="'Hide Password'"
+        <button class="mat-btn" mat-icon-button matSuffix (click)="hide = !hide" [attr.arial-label]="'Hide Password'"
         [attr.aria.pressed]="hide">
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
@@ -22,9 +22,6 @@
 
         <div class="example-button-row">
             <div>
-                <button mat-raised-button color="primary">
-                    <fa-icon class="fa-icon" [icon]="faFacebook"></fa-icon>LOGIN WITH FACEBOOK
-                </button>
                 <button mat-raised-button color="warn">
                     <fa-icon class="fa-icon" [icon]="faGoogle"></fa-icon>LOGIN WITH GOOGLE
                 </button>

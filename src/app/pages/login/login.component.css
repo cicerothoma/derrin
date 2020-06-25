@@ -55,6 +55,11 @@
     width: 60px;
   }
   
+  .mat-btn{
+    background-color: transparent;
+    border: none;
+  }
+
   @media (max-width: 420px){
     form{
       width: 84%;
