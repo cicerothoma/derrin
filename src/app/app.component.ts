@@ -13,8 +13,8 @@ import { async } from '@angular/core/testing';
 export class AppComponent {
 
   constructor(private fns: AngularFireFunctions) {
-    const addAdminRole = this.fns.httpsCallable('addAdminRole');
-    addAdminRole('admin@admin.com').subscribe(value => console.log(value))
+    // const addAdminRole = this.fns.httpsCallable('addAdminRole');
+    // addAdminRole('admin@admin.com').subscribe(value => console.log(value))
   }
 
 }
