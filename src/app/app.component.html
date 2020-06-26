@@ -20,7 +20,7 @@
                 </a>
             </mat-list-item>
 
-            <mat-list-item class="side-list">
+            <mat-list-item *ngIf="isAdmin" class="side-list">
                 <a (click)="sidenav.close()" matLine routerLink="/admin" routerLinkActive="side-active">
                     <button mat-icon-button>
                         <mat-icon class="side-icon">home</mat-icon>
@@ -38,7 +38,16 @@
                 </a>
             </mat-list-item>
 
-            <mat-list-item class="side-list">
+            <mat-list-item *ngIf="!loggedIn" class="side-list">
+                <a (click)="sidenav.close()" routerLink="/login" matLine>
+                    <button mat-icon-button>
+                        <mat-icon class="side-icon">home</mat-icon>
+                    </button>
+                    Login
+                </a>
+            </mat-list-item>
+
+            <mat-list-item *ngIf="loggedIn" class="side-list">
                 <a (click)="sidenav.close() && logout()" matLine>
                     <button mat-icon-button>
                         <mat-icon class="side-icon">close</mat-icon>
@@ -62,8 +71,12 @@
                 <ul fxLayout fxLayoutGap="10px" class="navigation-items">
                     <li><a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a></li>
                     <li> <a routerLink="/pricing" routerLinkActive="active" class="nav-link">Pricing</a></li>
-                    <li> <a routerLink="/admin" routerLinkActive="active" class="nav-link">Admin</a></li>
+                    <li *ngIf="isAdmin"> <a routerLink="/admin" routerLinkActive="active" class="nav-link">Admin</a>
+                    </li>
                     <li><a routerLink="/promos" routerLinkActive="active" class="nav-link">Promos</a></li>
+                    <li *ngIf="!loggedIn"><a routerLink="/login" routerLinkActive="active" class="nav-link">Login</a>
+                    </li>
+                    <li><a (click)="logout()" class="nav-link">Logout</a></li>
                 </ul>
             </div>
 

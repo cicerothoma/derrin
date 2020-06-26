@@ -13,6 +13,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 export class AppComponent {
+  loggedIn: boolean = false;
+  isAdmin: boolean = false;
 
   constructor(private fns: AngularFireFunctions,
     private afAuth: AngularFireAuth,
@@ -21,11 +23,32 @@ export class AppComponent {
     // addAdminRole('admin@admin.com').subscribe(value => console.log(value))
   }
 
-  async logout(): Promise<void> {
-    await this.afAuth.signOut();
-    this.matSnackbar.open('Logout Successful', 'Close', {
-      duration: 2000
+  ngAfterViewInit(): void {
+    this.afAuth.authState.subscribe((res) => {
+      if (!res) {
+        this.loggedIn = false;
+        this.isAdmin = false;
+      }
+      if (res) {
+        this.loggedIn = true;
+        res.getIdTokenResult().then((val) => {
+          this.isAdmin = val.claims.admin;
+        })
+      }
     })
+  }
+
+  async logout(): Promise<void> {
+    try {
+      await this.afAuth.signOut();
+      this.matSnackbar.open('Logout Successful', 'Close', {
+        duration: 2000
+      })
+    } catch (error) {
+      this.matSnackbar.open(error.message, 'Close', {
+        duration: 4000
+      })
+    }
   }
 
 }
