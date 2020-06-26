@@ -1,1 +1,31 @@
-<p>add-promo-modal works!</p>
+<form>
+
+    <h2><b>Add New Product</b></h2>
+
+    <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Enter Promo Name</mat-label>
+        <input matInput type="text" placeholder="Promo Name" formControlName="productName" required>
+        <mat-icon class="form-icon" matPrefix>create</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Input disabled</mat-label>
+        <input matInput [matDatepicker]="dp3" disabled>
+        <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+        <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Enter Product Description</mat-label>
+        <input matInput type="text" placeholder="Product Description" formControlName="productDescription" required>
+        <mat-icon class="form-icon" matPrefix>info</mat-icon>
+    </mat-form-field>
+
+    <input type="file" id="file" accept="image/*" required>
+    <mat-progress-bar mode="determinate" class="progress-bar"></mat-progress-bar>
+
+    <button mat-raised-button>
+        <mat-icon class="create-icon">create</mat-icon>Create
+    </button>
+
+</form>

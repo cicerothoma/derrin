@@ -44,6 +44,8 @@ import { PromosComponent } from './pages/promos/promos.component';
 import { AddPromoModalComponent } from './pages/add-promo-modal/add-promo-modal.component';
 import { MessageComponent } from './pages/message/message.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 
 
@@ -92,7 +94,9 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     MatInputModule,
     MatProgressBarModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatNativeDateModule,
+    MatDatepickerModule
   ],
   entryComponents: [
     OrderModalComponent,

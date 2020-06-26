@@ -12,8 +12,8 @@ import 'firebase/auth';
 })
 export class AuthService {
 
-  constructor(private afAuth: AngularFireAuth, 
-    private userService: UserService, 
+  constructor(private afAuth: AngularFireAuth,
+    private userService: UserService,
     private matSnackBar: MatSnackBar,
     private router: Router) { }
 
@@ -65,8 +65,10 @@ export class AuthService {
       const userClaims = await user.user.getIdTokenResult();
       if (userClaims.claims.admin) {
         this.router.navigate(['/admin'])
+      } else {
+        this.router.navigate(['/home'])
       }
-      
+
       return user
     } catch (error) {
       this.matSnackBar.open(error.message, 'Close', {
