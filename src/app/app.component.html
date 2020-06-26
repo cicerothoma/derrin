@@ -38,25 +38,34 @@
                 </a>
             </mat-list-item>
 
-        </mat-nav-list>    
+            <mat-list-item class="side-list">
+                <a (click)="sidenav.close() && logout()" matLine>
+                    <button mat-icon-button>
+                        <mat-icon class="side-icon">close</mat-icon>
+                    </button>
+                    Logout
+                </a>
+            </mat-list-item>
+
+        </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content>
 
         <mat-toolbar class="toolbar">
-            <mat-icon  class="menu-icon" (click)="sidenav.toggle()" fxHide.gt-xs>menu</mat-icon>
+            <mat-icon class="menu-icon" (click)="sidenav.toggle()" fxHide.gt-xs>menu</mat-icon>
             <div class="logo">
                 <div><a routerLink="/">LOGO</a></div>
             </div>
-           
-           <div fxHide.xs>
-               <ul fxLayout fxLayoutGap="10px" class="navigation-items">
-                 <li><a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a></li>
-                 <li> <a routerLink="/pricing" routerLinkActive="active" class="nav-link">Pricing</a></li>
-                 <li> <a routerLink="/admin" routerLinkActive="active" class="nav-link">Admin</a></li>
-                 <li><a routerLink="/promos" routerLinkActive="active" class="nav-link">Promos</a></li>
-               </ul>
-           </div>
+
+            <div fxHide.xs>
+                <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+                    <li><a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a></li>
+                    <li> <a routerLink="/pricing" routerLinkActive="active" class="nav-link">Pricing</a></li>
+                    <li> <a routerLink="/admin" routerLinkActive="active" class="nav-link">Admin</a></li>
+                    <li><a routerLink="/promos" routerLinkActive="active" class="nav-link">Promos</a></li>
+                </ul>
+            </div>
 
         </mat-toolbar>
 
