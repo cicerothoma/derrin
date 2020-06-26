@@ -1,86 +1,160 @@
-.move-down { 
-    margin: 5rem auto;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .mat-drawer-container {
-    background-color: #fff;
-    color: rgba(0,0,0,.87);
-  }
-  
-  form{
-    max-width: 350px;
-    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-    padding: 35px 35px 65px 35px;
-    box-sizing: border-box;
-  }
-  
-  form input, .form-field{
-    display: block;
-  }
-  
-  .submit-button{
-    background: var(--brandcolor);
-    color: #fff;
-    padding: 10px;
-    border-radius: 15px;
-    border: none;
-  }
-  
-  .password-link{
-    display: block;
-    text-align: end;
-    text-decoration: none;
-    color: #1ca5e6;
-    margin: 5px;
-  }
-  
-  .fa-icon{
-    margin-right: 5px;
-  }
-  
-  button{
-    margin-bottom: 5px;
-    width: 100%;
-  }
-
-  button:focus{
-      outline: none;
-  }
-  
-  img{
-    height: 60px;
-    width: 60px;
-  }
-  
-  .mat-btn{
-    background-color: transparent;
-    border: none;
-  }
-
-  .google{
-    color: #fff;
-    padding: 5px;
-    border: none;
-    margin-bottom: 14px;
-    background-color: rgb(244, 67, 54);
-    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+.move-down {
+  margin: 5rem auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
-  @media (max-width: 420px){
-    form{
-      width: 84%;
-      padding: 15px 20px;
-    }
-  
-    .move-down{
-      margin-top: 5rem;
-    }
-  
-    button{
-      font-size: 3vw;
-    }
+.mat-drawer-container {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+form {
+  max-width: 350px;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  padding: 35px 35px 65px 35px;
+  box-sizing: border-box;
+}
+
+form input,
+.form-field {
+  display: block;
+}
+
+.submit-button {
+  background: var(--brandcolor);
+  color: #fff;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+}
+
+.password-link {
+  display: block;
+  text-align: end;
+  text-decoration: none;
+  color: #1ca5e6;
+  margin: 5px;
+}
+
+.fa-icon {
+  margin-right: 5px;
+}
+
+button {
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+button:focus {
+  outline: none;
+}
+
+img {
+  height: 60px;
+  width: 60px;
+}
+
+.mat-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.google {
+  color: #fff;
+  padding: 5px;
+  border: none;
+  margin-bottom: 14px;
+  background-color: rgb(244, 67, 54);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(18deg, #e37682, #a58fe9);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hexagon-wrapper {
+  margin: auto;
+  display: flex;
+  text-align: initial;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.hexagon {
+  position: relative;
+  width: 46%;
+  height: 80%;
+  margin: auto;
+  color: white;
+  background: linear-gradient(-180deg, white, #fda3b2);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.hexagon .fa-icon {
+  z-index: 1;
+  margin: auto;
+  font-size: 28px;
+  color: rgba(0, 0, 0, 0.7);
+  background: linear-gradient(45deg, #a58fe9, #e37682);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.hexagon:before,
+.hexagon:after {
+  position: absolute;
+  content: "";
+  background: inherit;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  transition: 0.5s;
+  transform-origin: center;
+}
+.hexagon:before {
+  transform: rotateZ(60deg);
+}
+.hexagon:after {
+  transform: rotateZ(-60deg);
+}
+.hexagon:hover {
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.hexagon:hover:before {
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.hexagon:hover:after {
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+@media (max-width: 420px) {
+  form {
+    width: 84%;
+    padding: 15px 20px;
   }
-  
+
+  .move-down {
+    margin-top: 5rem;
+  }
+
+  button {
+    font-size: 3vw;
+  }
+}

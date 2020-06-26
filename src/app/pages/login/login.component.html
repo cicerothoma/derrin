@@ -1,5 +1,5 @@
 <form class="move-down" [formGroup]="loginForm">
-   
+
     <h2>Login</h2>
     <mat-form-field appearance="fill" class="form-field">
         <mat-label>Enter your email</mat-label>
@@ -11,24 +11,30 @@
         <mat-label>Password</mat-label>
         <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
         <button class="mat-btn" mat-icon-button matSuffix (click)="hide = !hide" [attr.arial-label]="'Hide Password'"
-        [attr.aria.pressed]="hide">
+            [attr.aria.pressed]="hide">
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
         <mat-icon matPrefix>enhanced_encryption</mat-icon>
 
     </mat-form-field>
 
+    <button mat-raised-button class="submit-button" (click)="login()">Login</button>
+
     <section>
 
         <div class="example-button-row">
             <div>
-                <button mat-raised-button class="google" color="warn">
+                <!-- <button mat-raised-button class="google" color="warn">
                     <fa-icon class="fa-icon" [icon]="faGoogle"></fa-icon>LOGIN WITH GOOGLE
-                </button>
+                </button> -->
+                <div class="hexagon-wrapper" (click)="googleLogin()">
+                    <div class="hexagon">
+                        <fa-icon class="fa-icon" [icon]="faGoogle"></fa-icon>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <button mat-raised-button class="submit-button" (click)="login()">Login</button>
 
 </form>

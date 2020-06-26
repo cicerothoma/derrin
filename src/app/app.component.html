@@ -76,7 +76,7 @@
                     <li><a routerLink="/promos" routerLinkActive="active" class="nav-link">Promos</a></li>
                     <li *ngIf="!loggedIn"><a routerLink="/login" routerLinkActive="active" class="nav-link">Login</a>
                     </li>
-                    <li><a (click)="logout()" class="nav-link">Logout</a></li>
+                    <li *ngIf="loggedIn"><a (click)="logout()" class="nav-link">Logout</a></li>
                 </ul>
             </div>
 
