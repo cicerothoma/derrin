@@ -102,7 +102,8 @@ import { FooterComponent } from './pages/footer/footer.component';
   ],
   entryComponents: [
     OrderModalComponent,
-    OrderInfoModalComponent
+    OrderInfoModalComponent,
+    AddPromoModalComponent
   ],
   providers: [
     AngularFireAuthGuard

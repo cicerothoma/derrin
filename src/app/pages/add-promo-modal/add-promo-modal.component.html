@@ -21,15 +21,6 @@
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="form-field">
-        <mat-label>Add End Date</mat-label>
-        <input matInput [matDatepicker]="dp3" formControlName="endDate" disabled>
-        <mat-error *ngIf="promoForm.get('endDate').invalid">{{getErrorMessage('endDate')}}</mat-error>
-        <mat-datepicker-toggle class="form-icon" matPrefix [for]="dp3"></mat-datepicker-toggle>
-        <mat-datepicker-toggle class="form-icon" matSuffix [for]="dp3"></mat-datepicker-toggle>
-        <mat-datepicker #dp3 disabled="false"></mat-datepicker>
-    </mat-form-field>
-
-    <mat-form-field appearance="fill" class="form-field">
         <mat-label>Enter Promo Details</mat-label>
         <input matInput type="text" placeholder="Promo Details" formControlName="promoDetails" required>
         <mat-error *ngIf="promoForm.get('promoDetails').invalid">{{getErrorMessage('promoDetails')}}</mat-error>
