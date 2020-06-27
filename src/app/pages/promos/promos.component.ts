@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddPromoModalComponent } from '../add-promo-modal/add-promo-modal.component';
 import { Router } from '@angular/router';
+import { PromoService } from 'src/app/services/promo.service';
+import { Observable } from 'rxjs';
+import { IPromo } from 'src/app/model/iPromo';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-promos',
@@ -10,13 +14,31 @@ import { Router } from '@angular/router';
 })
 export class PromosComponent implements OnInit {
 
-  constructor(private dialog: MatDialog, public router: Router) { }
+  promos: Observable<IPromo[]>
+
+  constructor(private dialog: MatDialog, public router: Router,
+    private promoService: PromoService,
+    private matSnackBar: MatSnackBar) { }
 
   ngOnInit(): void {
+    this.promos = this.promoService.getPromos()
   }
 
   openDialog(): void {
     this.dialog.open(AddPromoModalComponent)
+  }
+
+  async deletePromo(id: string): Promise<void> {
+    try {
+      await this.promoService.deletePromo(id)
+      this.matSnackBar.open('Promo Deleted', 'Close', {
+        duration: 3000
+      })
+    } catch (error) {
+      this.matSnackBar.open(error.message, 'Close', {
+        duration: 6000
+      })
+    }
   }
 
 }

@@ -2,7 +2,7 @@
   <mat-card class="example-card">
     <mat-card-header>
       <mat-card-title class="promo-title">Promo Name</mat-card-title>
-      <mat-card-subtitle>From Date to Date</mat-card-subtitle>
+      <mat-card-subtitle class="promo-sub">From Date to Date</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
     <mat-card-content>
@@ -13,7 +13,8 @@
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-fab color="accent" class="del-btn" aria-label="Example icon button with a bookmark icon">
+      <button *ngIf="router.url.includes('admin')" mat-fab color="accent" class="del-btn"
+        aria-label="Example icon button with a bookmark icon">
         <mat-icon>delete</mat-icon>
       </button>
 
@@ -22,104 +23,13 @@
 
   <mat-card class="example-card">
     <mat-card-header>
-      <mat-card-title class="promo-title">Promo Name</mat-card-title>
-      <mat-card-subtitle>From Date to Date</mat-card-subtitle>
+      <mat-card-title class="promo-title">
+        <mat-icon>calendar_today</mat-icon>
+      </mat-card-title>
     </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-fab color="accent" class="del-btn" aria-label="Example icon button with a bookmark icon">
-        <mat-icon>delete</mat-icon>
-      </button>
-
-    </mat-card-actions>
-  </mat-card>
-
-  <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title class="promo-title">Promo Name</mat-card-title>
-      <mat-card-subtitle>From Date to Date</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-fab color="accent" class="del-btn" aria-label="Example icon button with a bookmark icon">
-        <mat-icon>delete</mat-icon>
-      </button>
-
-    </mat-card-actions>
-  </mat-card>
-
-
-  <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title class="promo-title">Promo Name</mat-card-title>
-      <mat-card-subtitle>From Date to Date</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-fab color="accent" class="del-btn" aria-label="Example icon button with a bookmark icon">
-        <mat-icon>delete</mat-icon>
-      </button>
-
-    </mat-card-actions>
-  </mat-card>
-
-  <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title class="promo-title">Promo Name</mat-card-title>
-      <mat-card-subtitle>From Date to Date</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions *ngIf="router.url.includes('admin')">
-      <button mat-fab color="accent" class="del-btn" aria-label="Delete Icon">
-        <mat-icon>delete</mat-icon>
-      </button>
-
-    </mat-card-actions>
-  </mat-card>
-
-  <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title class="promo-title">Promo Name</mat-card-title>
-      <mat-card-subtitle>From Date to Date</mat-card-subtitle>
-    </mat-card-header>
-
     <mat-card-content class="content">
       <h1><b>NO EVENTS YET</b></h1>
     </mat-card-content>
-    <mat-card-actions *ngIf="router.url.includes('admin')">
-      <button mat-fab color="accent" class="del-btn" aria-label="Delete Icon">
-        <mat-icon>delete</mat-icon>
-      </button>
-
-    </mat-card-actions>
   </mat-card>
 
 </div>
