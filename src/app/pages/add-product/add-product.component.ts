@@ -17,8 +17,8 @@ export class AddProductComponent implements OnInit {
   uploadPercent: Observable<number>;
   downloadURL: Observable<string>;
 
-  constructor(private fb: FormBuilder, 
-    private productService: ProductsService, 
+  constructor(private fb: FormBuilder,
+    private productService: ProductsService,
     private matSnackBar: MatSnackBar,
     private afStorage: AngularFireStorage) {
     this.productForm = this.fb.group({
@@ -27,13 +27,17 @@ export class AddProductComponent implements OnInit {
       productDescription: ['', Validators.required],
       productImageUrl: ['', Validators.required],
     })
-   }
+  }
 
   ngOnInit(): void {
   }
 
+  getErrorMessage(formControlName: string) {
+    return this.productForm.get(formControlName).hasError('required') ? 'You must enter a value' : '';
+  }
+
   fileUpload(event) {
-    const { productName } = this.productForm.value; 
+    const { productName } = this.productForm.value;
     const file = event.target.files[0];
     const filePath: string = `productImages/${productName}`;
     const fileRef: AngularFireStorageReference = this.afStorage.ref(filePath);

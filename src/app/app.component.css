@@ -1,120 +1,125 @@
-mat-sidenav-container, mat-sidenav-content, mat-sidenav {
-    height: 100%;
+mat-sidenav-container,
+mat-sidenav-content,
+mat-sidenav {
+  height: 100%;
 }
 
-mat-toolbar{
-    background: #fafafa;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 125px;
+mat-toolbar {
+  background: #fafafa;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 125px;
 }
 
-
-mat-sidenav{
-    width:150px;
+mat-sidenav {
+  width: 150px;
 }
 
-
-.logo a{
-    color: var(--brandcolor);
+.logo img {
+  width: 113px;
+  margin-top: 30px;
+  position: relative;
+  right: 31px;
 }
 
-a{
-    text-decoration: none;
+.logo a {
+  color: var(--brandcolor);
 }
 
-mat-list-item{
-    /* padding: 5px; */
-    position: relative;
+a {
+  text-decoration: none;
 }
 
-.side-list a{
-    
-    color: var(--brandcolor);
-    margin: 0;
-    font-weight: normal;
-    font-size: inherit;
-    /* padding: 5px; */
-    align-items: center;
-    padding-bottom: 10px;
-
+mat-list-item {
+  /* padding: 5px; */
+  position: relative;
 }
 
-.side-list a:active{
-    color: #fff;
+.side-list a {
+  color: var(--brandcolor);
+  margin: 0;
+  font-weight: normal;
+  font-size: inherit;
+  /* padding: 5px; */
+  align-items: center;
+  padding-bottom: 10px;
 }
 
-.side-active{
-    background: var(--brandcolor);
-    color: #fff !important;
+.side-list a:active {
+  color: #fff;
 }
 
-.navigation-items a{
-    color: #000;
-    font-family: 'Montserrat', sans-serif;
+.side-active {
+  background: var(--brandcolor);
+  color: #fff !important;
 }
 
-.navigation-items{
-    list-style: none;
+.navigation-items a {
+  color: #000;
+  font-family: "Montserrat", sans-serif;
 }
 
-.navigation-items li{
-    display: inline;
+.navigation-items {
+  list-style: none;
 }
 
-.menu-icon{
-    color: var(--brandcolor);
+.navigation-items li {
+  display: inline;
 }
 
-.menu-icon:hover{
-    cursor: pointer;
+.menu-icon {
+  color: var(--brandcolor);
 }
 
-.side-icon:active{
-    color: #fff;  
-  }
+.menu-icon:hover {
+  cursor: pointer;
+}
+
+.side-icon:active {
+  color: #fff;
+}
 
 .active {
-    text-decoration: none;
-   
-    border-bottom: 3px solid var(--brandcolor); 
-    border-radius: 0px;
+  text-decoration: none;
+
+  border-bottom: 3px solid var(--brandcolor);
+  border-radius: 0px;
 }
 
-.navigation-items .nav-link{
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;  
-    padding: 3px 10px;
-    transition: .1s ease-in;
-    text-decoration: none;
+.navigation-items .nav-link {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  padding: 3px 10px;
+  transition: 0.1s ease-in;
+  text-decoration: none;
 }
 
-.sidebar{
-    position: fixed;
+.sidebar {
+  position: fixed;
 }
 
-.side-icon{
-    color: var(--brandcolor);
-    background: none;
-    position: relative;
-    top: 5px;
+.side-icon {
+  color: var(--brandcolor);
+  background: none;
+  position: relative;
+  top: 5px;
 }
 
-.sidenav button{
-    background-color: transparent;
-    border: none;
+.sidenav button {
+  background-color: transparent;
+  border: none;
 }
 
-@media(max-width: 420px){
-    mat-toolbar{
-        padding: 10px;  
-        box-sizing: border-box;
-        justify-content: space-around;
-        text-align: center;
-    }
-    
-    .menu-icon{
-        order: 2;
-    }
+@media (max-width: 420px) {
+  mat-toolbar {
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .menu-icon {
+    order: 2;
+  }
 }

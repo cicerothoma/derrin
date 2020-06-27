@@ -51,6 +51,11 @@
   margin-bottom: 15px;
 }
 
+.content {
+  text-align: center;
+  align-items: center;
+}
+
 @media (max-width: 420px) {
   .example-card {
     width: 87%;
@@ -68,5 +73,11 @@
     display: flex;
     flex-wrap: wrap;
     flex-basis: 350px;
+  }
+
+  .add-btn {
+    position: fixed;
+    right: 25px;
+    bottom: 20px;
   }
 }

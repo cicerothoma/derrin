@@ -97,8 +97,25 @@
         bred for hunting.
       </p>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-fab color="accent" class="del-btn" aria-label="Example icon button with a bookmark icon">
+    <mat-card-actions *ngIf="router.url.includes('admin')">
+      <button mat-fab color="accent" class="del-btn" aria-label="Delete Icon">
+        <mat-icon>delete</mat-icon>
+      </button>
+
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title class="promo-title">Promo Name</mat-card-title>
+      <mat-card-subtitle>From Date to Date</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content class="content">
+      <h1><b>NO EVENTS YET</b></h1>
+    </mat-card-content>
+    <mat-card-actions *ngIf="router.url.includes('admin')">
+      <button mat-fab color="accent" class="del-btn" aria-label="Delete Icon">
         <mat-icon>delete</mat-icon>
       </button>
 

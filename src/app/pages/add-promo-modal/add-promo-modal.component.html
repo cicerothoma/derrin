@@ -1,31 +1,47 @@
-<form>
+<form [formGroup]="promoForm">
+
+    <img class="form-image" src="../../../assets/images/derrin_new_logo.png" alt="Logo">
 
     <h2><b>Add New Product</b></h2>
 
     <mat-form-field appearance="fill" class="form-field">
         <mat-label>Enter Promo Name</mat-label>
-        <input matInput type="text" placeholder="Promo Name" formControlName="productName" required>
+        <input matInput type="text" placeholder="Promo Name" formControlName="promoName" required>
+        <mat-error *ngIf="promoForm.get('promoName').invalid">{{getErrorMessage('promoName')}}</mat-error>
         <mat-icon class="form-icon" matPrefix>create</mat-icon>
     </mat-form-field>
 
-    <mat-form-field appearance="fill">
-        <mat-label>Input disabled</mat-label>
-        <input matInput [matDatepicker]="dp3" disabled>
-        <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+    <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Add Start Date</mat-label>
+        <input matInput [matDatepicker]="dp3" formControlName="startDate" disabled>
+        <mat-error *ngIf="promoForm.get('startDate').invalid">{{getErrorMessage('startDate')}}</mat-error>
+        <mat-datepicker-toggle class="form-icon" matPrefix [for]="dp3"></mat-datepicker-toggle>
+        <mat-datepicker-toggle class="form-icon" matSuffix [for]="dp3"></mat-datepicker-toggle>
         <mat-datepicker #dp3 disabled="false"></mat-datepicker>
     </mat-form-field>
 
     <mat-form-field appearance="fill" class="form-field">
-        <mat-label>Enter Product Description</mat-label>
-        <input matInput type="text" placeholder="Product Description" formControlName="productDescription" required>
+        <mat-label>Add End Date</mat-label>
+        <input matInput [matDatepicker]="dp3" formControlName="endDate" disabled>
+        <mat-error *ngIf="promoForm.get('endDate').invalid">{{getErrorMessage('endDate')}}</mat-error>
+        <mat-datepicker-toggle class="form-icon" matPrefix [for]="dp3"></mat-datepicker-toggle>
+        <mat-datepicker-toggle class="form-icon" matSuffix [for]="dp3"></mat-datepicker-toggle>
+        <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Enter Promo Details</mat-label>
+        <input matInput type="text" placeholder="Promo Details" formControlName="promoDetails" required>
+        <mat-error *ngIf="promoForm.get('promoDetails').invalid">{{getErrorMessage('promoDetails')}}</mat-error>
         <mat-icon class="form-icon" matPrefix>info</mat-icon>
     </mat-form-field>
 
-    <input type="file" id="file" accept="image/*" required>
-    <mat-progress-bar mode="determinate" class="progress-bar"></mat-progress-bar>
+    <input type="file" (change)="fileUpload($event)" id="file" accept="image/*" required>
+    <mat-progress-bar mode="determinate" [value]="(uploadPercent | async)" class="progress-bar"></mat-progress-bar>
 
-    <button mat-raised-button>
-        <mat-icon class="create-icon">create</mat-icon>Create
+    <button mat-raised-button (click)="createPromo()">
+        <mat-icon class="create-icon">create</mat-icon>
+        Create Promo
     </button>
 
 </form>

@@ -5,26 +5,31 @@
     <mat-form-field appearance="fill" class="form-field">
         <mat-label>Enter Product Name</mat-label>
         <input matInput type="text" placeholder="Product Name" formControlName="productName" required>
+        <mat-error *ngIf="productForm.get('productName').invalid">{{getErrorMessage('productName')}}</mat-error>
         <mat-icon class="form-icon" matPrefix>create</mat-icon>
-    
+
     </mat-form-field>
     <mat-form-field appearance="fill" class="form-field">
         <mat-label>Enter Product Price</mat-label>
         <input matInput type="number" placeholder="Product Price" formControlName="productPrice" required>
+        <mat-error *ngIf="productForm.get('productPrice').invalid">{{getErrorMessage('productPrice')}}</mat-error>
         <mat-icon class="form-icon" matPrefix>local_offer</mat-icon>
-    
+
     </mat-form-field>
     <mat-form-field appearance="fill" class="form-field">
         <mat-label>Enter Product Description</mat-label>
         <input matInput type="text" placeholder="Product Description" formControlName="productDescription" required>
+        <mat-error *ngIf="productForm.get('productDescription').invalid">{{getErrorMessage('productDescription')}}
+        </mat-error>
         <mat-icon class="form-icon" matPrefix>info</mat-icon>
-    
+
     </mat-form-field>
-            
-    <input type="file" (change)="fileUpload($event)"  id="file" accept="image/*" required>
+
+    <input type="file" (change)="fileUpload($event)" id="file" accept="image/*" required>
     <mat-progress-bar mode="determinate" [value]="(uploadPercent | async)" class="progress-bar"></mat-progress-bar>
 
-<button mat-raised-button (click)="submit()"><mat-icon class="create-icon">create</mat-icon>Create</button>
+    <button mat-raised-button (click)="submit()">
+        <mat-icon class="create-icon">create</mat-icon>Create
+    </button>
 
 </form>
-

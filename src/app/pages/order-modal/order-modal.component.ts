@@ -20,18 +20,18 @@ export class OrderModalComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: IProduct,
     public fb: FormBuilder,
     private orderService: OrderService,
-    private matSnackbar: MatSnackBar) { 
-      this.orderForm = this.fb.group({
-        name: ['', Validators.required],
-        phone: ['', Validators.required],
-        quantity: ['1', Validators.required]
-      })
-    }
+    private matSnackbar: MatSnackBar) {
+    this.orderForm = this.fb.group({
+      name: ['', Validators.required],
+      phone: ['', Validators.required],
+      quantity: ['1', Validators.required]
+    })
+  }
 
   ngOnInit(): void {
   }
 
-  getErrorMessage(formControlName) {
+  getErrorMessage(formControlName: string) {
     return this.orderForm.get(formControlName).hasError('required') ? 'You must enter a value' : '';
   }
 
@@ -46,7 +46,7 @@ export class OrderModalComponent implements OnInit {
       } else {
         this.totalPrice = this.data.productPrice * value
       }
-    })  
+    })
   }
 
   async order() {
@@ -71,7 +71,7 @@ export class OrderModalComponent implements OnInit {
         this.matSnackbar.open(`Your Order Has Been Sent And we will get back to you as soon as possible`, 'Close', {
           duration: 6000
         })
-  
+
       }
     } catch (error) {
       this.matSnackbar.open(error.message, 'Close', {
@@ -81,5 +81,5 @@ export class OrderModalComponent implements OnInit {
 
   }
 
-  
+
 }

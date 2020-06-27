@@ -64,7 +64,7 @@
         <mat-toolbar class="toolbar">
             <mat-icon class="menu-icon" (click)="sidenav.toggle()" fxHide.gt-xs>menu</mat-icon>
             <div class="logo">
-                <div><a routerLink="/">LOGO</a></div>
+                <div><a routerLink="/"><img src="../assets/images/derrin_new_logo.png" alt="" srcset=""></a></div>
             </div>
 
             <div fxHide.xs>
@@ -85,6 +85,7 @@
         <main>
             <router-outlet></router-outlet>
         </main>
+        <app-footer></app-footer>
 
     </mat-sidenav-content>
 
