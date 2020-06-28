@@ -103,6 +103,7 @@ import { FooterComponent } from './pages/footer/footer.component';
   entryComponents: [
     OrderModalComponent,
     OrderInfoModalComponent,
+    UpdateProductModalComponent,
     AddPromoModalComponent
   ],
   providers: [

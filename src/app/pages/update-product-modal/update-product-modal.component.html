@@ -4,28 +4,28 @@
 
     <mat-form-field appearance="fill" class="form-field">
         <mat-label>Enter Product Name</mat-label>
-        <input matInput type="text" placeholder="Product Name" formControlName="productName" required>
+        <input matInput type="text" name="productName" placeholder="Product Name" [(ngModel)]="data.productName"
+            required>
         <mat-icon class="form-icon" matPrefix>create</mat-icon>
-    
+
     </mat-form-field>
     <mat-form-field appearance="fill" class="form-field">
         <mat-label>Enter Product Price</mat-label>
-        <input matInput type="number" placeholder="Product Price" formControlName="productPrice" required>
+        <input matInput type="number" name="productPrice" placeholder="Product Price" [(ngModel)]="data.productPrice"
+            required>
         <mat-icon class="form-icon" matPrefix>local_offer</mat-icon>
-    
+
     </mat-form-field>
     <mat-form-field appearance="fill" class="form-field">
         <mat-label>Enter Product Description</mat-label>
-        <input matInput type="text" placeholder="Product Description" formControlName="productDescription" required>
+        <input matInput type="text" name="productDescription" placeholder="Product Description"
+            [(ngModel)]="data.productDescription" required>
         <mat-icon class="form-icon" matPrefix>info</mat-icon>
-    
-    </mat-form-field>
-            
-    <input type="file"  id="file" accept="image/*" required>
-    <mat-progress-bar mode="determinate"class="progress-bar"></mat-progress-bar>
 
-<button mat-raised-butto><mat-icon class="create-icon">create</mat-icon>Edit</button>
+    </mat-form-field>
+
+    <button mat-raised-button (click)="update()">
+        <mat-icon class="create-icon">create</mat-icon>Edit
+    </button>
 
 </form>
-
-
