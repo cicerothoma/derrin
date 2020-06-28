@@ -14,7 +14,7 @@
             <mat-list-item class="side-list">
                 <a (click)="sidenav.close()" matLine routerLink="/pricing" routerLinkActive="side-active">
                     <button mat-icon-button>
-                        <mat-icon class="side-icon">home</mat-icon>
+                        <mat-icon class="side-icon">local_offer</mat-icon>
                     </button>
                     Pricing
                 </a>
@@ -23,7 +23,7 @@
             <mat-list-item *ngIf="isAdmin" class="side-list">
                 <a (click)="sidenav.close()" matLine routerLink="/admin" routerLinkActive="side-active">
                     <button mat-icon-button>
-                        <mat-icon class="side-icon">home</mat-icon>
+                        <mat-icon class="side-icon">build</mat-icon>
                     </button>
                     Admin
                 </a>
@@ -32,7 +32,7 @@
             <mat-list-item class="side-list">
                 <a (click)="sidenav.close()" matLine routerLink="/promos" routerLinkActive="side-active">
                     <button mat-icon-button>
-                        <mat-icon class="side-icon">home</mat-icon>
+                        <mat-icon class="side-icon">info</mat-icon>
                     </button>
                     Promos
                 </a>
@@ -41,7 +41,7 @@
             <mat-list-item *ngIf="!loggedIn" class="side-list">
                 <a (click)="sidenav.close()" routerLink="/login" matLine>
                     <button mat-icon-button>
-                        <mat-icon class="side-icon">home</mat-icon>
+                        <mat-icon class="side-icon">exit_to_app</mat-icon>
                     </button>
                     Login
                 </a>
@@ -64,7 +64,7 @@
         <mat-toolbar class="toolbar">
             <mat-icon class="menu-icon" (click)="sidenav.toggle()" fxHide.gt-xs>menu</mat-icon>
             <div class="logo">
-                <div><a routerLink="/"><img src="../assets/images/derrin_new_logo.png" alt="" srcset=""></a></div>
+                <div><a routerLink="/"><img src="../assets/images/derrin_new_logo.png" alt="Logo"></a></div>
             </div>
 
             <div fxHide.xs>
