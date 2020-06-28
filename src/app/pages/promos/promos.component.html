@@ -1,27 +1,26 @@
 <div class="wrapper">
-  <mat-card class="example-card">
+  <mat-card class="example-card" *ngFor="let promo of promos">
     <mat-card-header>
-      <mat-card-title class="promo-title">Promo Name</mat-card-title>
-      <mat-card-subtitle class="promo-sub">From Date to Date</mat-card-subtitle>
+      <mat-card-title class="promo-title">{{promo.promoName}}</mat-card-title>
+      <mat-card-subtitle class="promo-sub">From {{promo.startDate.toDate() | date:'mediumDate'}} to {{promo.endDate.toDate() | date:'mediumDate'}}
+      </mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <img mat-card-image [src]="promo.imageUrl" alt="Photo of a Shiba Inu">
     <mat-card-content>
       <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
+        {{promo.promoDetails}}
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <button *ngIf="router.url.includes('admin')" mat-fab color="accent" class="del-btn"
-        aria-label="Example icon button with a bookmark icon">
+      <button (click)="deletePromo(promo.id)" *ngIf="router.url.includes('admin')" mat-fab color="accent"
+        class="del-btn" aria-label="Example icon button with a bookmark icon">
         <mat-icon>delete</mat-icon>
       </button>
 
     </mat-card-actions>
   </mat-card>
 
-  <mat-card class="example-card">
+  <mat-card class="example-card" *ngIf="!promos || promos.length < 1">
     <mat-card-header>
       <mat-card-title class="promo-title">
         <mat-icon>calendar_today</mat-icon>

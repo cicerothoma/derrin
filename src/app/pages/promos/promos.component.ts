@@ -14,14 +14,16 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class PromosComponent implements OnInit {
 
-  promos: Observable<IPromo[]>
+  promos: IPromo[]
 
   constructor(private dialog: MatDialog, public router: Router,
     private promoService: PromoService,
     private matSnackBar: MatSnackBar) { }
 
   ngOnInit(): void {
-    this.promos = this.promoService.getPromos()
+    this.promoService.getPromos().subscribe(value => {
+      this.promos = value
+    })
   }
 
   openDialog(): void {
