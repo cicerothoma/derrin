@@ -20,7 +20,7 @@ export class AppComponent {
     private afAuth: AngularFireAuth,
     private matSnackbar: MatSnackBar) {
     // const addAdminRole = this.fns.httpsCallable('addAdminRole');
-    // addAdminRole('admin@admin.com').subscribe(value => console.log(value))
+    // addAdminRole('aderinsolacynthia@gmail.com').subscribe(value => console.log(value))
   }
 
   ngAfterViewInit(): void {

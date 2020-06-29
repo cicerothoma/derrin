@@ -5,15 +5,15 @@
         <img src="../../../assets/images/derrin_new_logo.png" alt="" srcset="">
 
         <p class="footer-links">
-            <a href="#home" class="link-1">Home</a>
+            <a routerLink="/" class="link-1">Home</a>
 
 
-            <a routerLink="/home">Pricing</a>
+            <a routerLink="/pricing">Pricing</a>
 
-            <a href="#about">About</a>
+            <a>About</a>
 
 
-            <a href="#contact">Contact</a>
+            <a>Contact</a>
         </p>
 
     </div>
@@ -21,18 +21,18 @@
     <div class="footer-center">
 
         <div>
-            <i class="fa fa-map-marker"></i>
+            <fa-icon class="fa fa-map-marker" [icon]="faMapMarker"></fa-icon>
             <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
         </div>
 
         <div>
-            <i class="fa fa-phone"></i>
-            <p>+1.555.555.5555</p>
+            <fa-icon class="fa fa-phone" [icon]="faPhone"></fa-icon>
+            <p>+234 802 068 9462</p>
         </div>
 
         <div>
-            <i class="fa fa-envelope"></i>
-            <p><a href="mailto:support@company.com">support@company.com</a></p>
+            <fa-icon class="fa fa-envelope" [icon]="faEnvelope"></fa-icon>
+            <p><a target="_blank" href="mailto:aderinsolacynthia@gmail.com">support@cakesnmore.com</a></p>
         </div>
 
     </div>
@@ -41,14 +41,17 @@
 
         <p class="footer-company-about">
             <span>About the company</span>
-            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus
-            vehicula sit amet.
+            We're the No. 1 Online Bakeshop and we deliver delectable cakes and confectioners at very affordable prices.
+            We're your plug for everything flour, butter, eggs and sugar..
         </p>
 
         <div class="footer-icons">
 
-            <a target="_blank" href="#">
+            <a target="_blank" href="https://twitter.com/cakesnmore_ng">
                 <fa-icon class="socialMedia" [icon]="faTwitter"></fa-icon>
+            </a>
+            <a target="_blank" href="https://t.co/c86dCrsYBT?amp=1">
+                <fa-icon class="socialMedia" [icon]="faWhatsapp"></fa-icon>
             </a>
             <a target="_blank" href="#">
                 <fa-icon class="socialMedia" [icon]="faInstagram"></fa-icon>

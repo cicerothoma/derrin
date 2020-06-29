@@ -27,7 +27,9 @@ export class PromosComponent implements OnInit {
   }
 
   openDialog(): void {
-    this.dialog.open(AddPromoModalComponent)
+    this.dialog.open(AddPromoModalComponent, {
+      height: '80%'
+    })
   }
 
   async deletePromo(id: string): Promise<void> {
