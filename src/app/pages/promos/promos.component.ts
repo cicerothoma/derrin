@@ -28,7 +28,7 @@ export class PromosComponent implements OnInit {
 
   openDialog(): void {
     this.dialog.open(AddPromoModalComponent, {
-      height: '80%'
+      maxHeight: '80%'
     })
   }
 

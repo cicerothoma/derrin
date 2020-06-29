@@ -37,7 +37,8 @@ export class OrdersComponent implements OnInit {
 
   openDialog(productData: IOrderModal) {
     this.dialog.open(OrderInfoModalComponent, {
-      data: productData
+      data: productData,
+      maxHeight: '80%'
     })
   }
 

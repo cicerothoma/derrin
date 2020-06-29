@@ -1,1 +1,20 @@
-<p>message works!</p>
+<mat-list *ngFor="let message of (messages | async)">
+    <mat-list-item class="mat-list">
+        <div mat-line>{{ message.name }}</div>
+        <div mat-line> {{ message.email }} </div>
+        <div mat-line> {{ message.message.slice(0, 10) }}... </div>
+        <div mat-line>{{message.date | date:'medium'}}</div>
+
+        <div mat-line class="actions">
+            <button mat-icon-button (click)="openDialog(message)">
+                <mat-icon matSuffix>info</mat-icon><span>Info</span>
+            </button>
+            <button mat-icon-button (click)="delete(message.id)">
+                <mat-icon matSuffix>delete</mat-icon><span>Delete</span>
+            </button>
+        </div>
+
+
+        <mat-divider></mat-divider>
+    </mat-list-item>
+</mat-list>

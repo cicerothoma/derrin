@@ -47,6 +47,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FooterComponent } from './pages/footer/footer.component';
+import { MessageModalComponentComponent } from './pages/message-modal-component/message-modal-component.component';
 
 
 
@@ -68,7 +69,8 @@ import { FooterComponent } from './pages/footer/footer.component';
     AddPromoModalComponent,
     MessageComponent,
     NotFoundComponent,
-    FooterComponent
+    FooterComponent,
+    MessageModalComponentComponent
   ],
   imports: [
     BrowserModule,

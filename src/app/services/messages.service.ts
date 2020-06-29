@@ -41,7 +41,7 @@ export class MessagesService {
     return this.messagesCollection.doc(id).update(data)
   }
 
-  deleteProduct(id: string): Promise<void> {
+  deleteMessage(id: string): Promise<void> {
     return this.messagesCollection.doc(id).delete()
   }
 }

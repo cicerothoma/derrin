@@ -85,10 +85,10 @@
 
 <section id="contact-us">
   <h1 class="contact-header">Contact Us</h1>
-  <form class="contact-form">
-    <input name="name" type="text" class="feedback-input" placeholder="Name" />
-    <input name="email" type="text" class="feedback-input" placeholder="Email" />
-    <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-    <input type="submit" value="Submit" />
+  <form class="contact-form" [formGroup]="contactUsForm">
+    <input type="text" formControlName="name" class="feedback-input" placeholder="Name" />
+    <input type="text" formControlName="email" class="feedback-input" placeholder="Email" />
+    <textarea class="feedback-input" formControlName="message" placeholder="Message"></textarea>
+    <button type="button" (click)="submit()">Submit</button>
   </form>
 </section>
