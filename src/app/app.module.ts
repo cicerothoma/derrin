@@ -106,7 +106,8 @@ import { MessageModalComponentComponent } from './pages/message-modal-component/
     OrderModalComponent,
     OrderInfoModalComponent,
     UpdateProductModalComponent,
-    AddPromoModalComponent
+    AddPromoModalComponent,
+    MessageModalComponentComponent
   ],
   providers: [
     AngularFireAuthGuard
