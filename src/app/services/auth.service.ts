@@ -68,8 +68,10 @@ export class AuthService {
       } else {
         this.router.navigate(['/home'])
       }
+      this.matSnackBar.open('Login Successful', 'Close', {
+        duration: 2000
+      })
 
-      return user
     } catch (error) {
       this.matSnackBar.open(error.message, 'Close', {
         duration: 6000

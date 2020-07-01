@@ -33,17 +33,8 @@ export class LoginComponent implements OnInit {
     this.authService.loginWithEmailAndPassword(email, password)
   }
 
-  async googleLogin() {
-    try {
-      await this.authService.googleLogin();
-      this.matSnackbar.open('Login Successful', 'Close', {
-        duration: 3000
-      })
-    } catch (error) {
-      this.matSnackbar.open(error.message, 'Close', {
-        duration: 6000
-      })
-    }
+  googleLogin() {
+    this.authService.googleLogin();
   }
 
 }
