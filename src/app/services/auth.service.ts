@@ -81,6 +81,7 @@ export class AuthService {
   async logout(): Promise<void> {
     try {
       await this.afAuth.signOut();
+      this.router.navigate(['/home'])
       this.matSnackBar.open('Logout Successful', 'Close', {
         duration: 3000
       })
