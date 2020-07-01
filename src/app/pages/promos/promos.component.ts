@@ -3,7 +3,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { AddPromoModalComponent } from '../add-promo-modal/add-promo-modal.component';
 import { Router } from '@angular/router';
 import { PromoService } from 'src/app/services/promo.service';
-import { Observable } from 'rxjs';
 import { IPromo } from 'src/app/model/iPromo';
 import { MatSnackBar } from '@angular/material/snack-bar';
 

@@ -78,4 +78,17 @@ export class AuthService {
       })
     }
   }
+  async logout(): Promise<void> {
+    try {
+      await this.afAuth.signOut();
+      this.matSnackBar.open('Logout Successful', 'Close', {
+        duration: 3000
+      })
+    } catch (error) {
+      this.matSnackBar.open(error.message, 'Close', {
+        duration: 6000
+      })
+    }
+  }
+
 }
