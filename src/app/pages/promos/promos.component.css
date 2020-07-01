@@ -56,9 +56,11 @@
   margin-bottom: 15px;
 }
 
-.content {
-  text-align: center;
-  align-items: center;
+/* No Orders */
+.order-card {
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 30px 10px;
 }
 
 .mat-card-header {
@@ -70,6 +72,20 @@
 
 .calendar-icon {
   font-size: 36px;
+}
+
+.content {
+  text-align: center;
+}
+
+.calendar-icon {
+  color: var(--brandcolor);
+}
+
+@media (min-width: 768px) {
+  .order-card {
+    width: 40%;
+  }
 }
 
 @media (max-width: 420px) {

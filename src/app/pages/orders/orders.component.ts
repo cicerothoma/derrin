@@ -13,13 +13,19 @@ import { OrderInfoModalComponent } from '../order-info-modal/order-info-modal.co
 })
 export class OrdersComponent implements OnInit {
 
-  orders: Observable<IOrderModal[]>
+  orders: IOrderModal[];
   constructor(private orderService: OrderService,
     private matSnackbar: MatSnackBar,
     public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.orders = this.orderService.getOrders();
+    this.orderService.getOrders().subscribe((value) => {
+      this.orders = value
+    }, (error) => {
+      this.matSnackbar.open(error.message, 'Close', {
+        duration: 4000
+      })
+    })
   }
 
   async delete(id: string) {

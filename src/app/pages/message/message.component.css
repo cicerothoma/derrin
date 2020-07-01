@@ -13,3 +13,35 @@ span {
   top: -5px;
   font-size: 14px;
 }
+
+/* No Orders */
+.order-card {
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 30px 10px;
+}
+
+.mat-card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-icon {
+  font-size: 36px;
+}
+
+.content {
+  text-align: center;
+}
+
+.calendar-icon {
+  color: var(--brandcolor);
+}
+
+@media (min-width: 768px) {
+  .order-card {
+    width: 40%;
+  }
+}

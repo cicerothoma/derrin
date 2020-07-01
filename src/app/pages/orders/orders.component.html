@@ -1,4 +1,4 @@
-<mat-list *ngFor="let order of (orders | async)">
+<mat-list *ngFor="let order of orders">
   <mat-list-item class="list-items">
     <img mat-list-avatar [src]="order.product.productImageUrl" alt="Product Image">
     <div mat-line>{{ order.name }}</div>
@@ -20,13 +20,13 @@
   </mat-list-item>
 </mat-list>
 
-<mat-card class="order-card">
+<mat-card *ngIf="orders.length < 1 || !orders" class="order-card">
   <mat-card-header class="mat-card-header">
     <mat-card-title class="promo-title">
       <mat-icon class="calendar-icon">campaign</mat-icon>
     </mat-card-title>
   </mat-card-header>
   <mat-card-content class="content">
-    <h1><b>NO PRESENT OERDERS</b></h1>
+    <h1><b>NO PRESENT ORDER</b></h1>
   </mat-card-content>
 </mat-card>

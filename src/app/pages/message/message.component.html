@@ -1,4 +1,4 @@
-<mat-list *ngFor="let message of (messages | async)">
+<mat-list *ngFor="let message of messages">
     <mat-list-item class="mat-list">
         <div mat-line>{{ message.name }}</div>
         <div mat-line> {{ message.email }} </div>
@@ -19,13 +19,13 @@
     </mat-list-item>
 </mat-list>
 
-<mat-card class="example-card">
-    <mat-card-header>
+<mat-card *ngIf="messages.length < 1 || !messages" class="order-card">
+    <mat-card-header class="mat-card-header">
         <mat-card-title class="promo-title">
-            <mat-icon class="calendar-icon">calendar_today</mat-icon>
+            <mat-icon class="calendar-icon">mail</mat-icon>
         </mat-card-title>
     </mat-card-header>
     <mat-card-content class="content">
-        <h1><b>NO EVENTS YET</b></h1>
+        <h1><b>NO PRESENT MESSAGE</b></h1>
     </mat-card-content>
 </mat-card>

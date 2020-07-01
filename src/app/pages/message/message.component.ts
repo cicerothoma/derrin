@@ -12,12 +12,14 @@ import { MessageModalComponentComponent } from '../message-modal-component/messa
 })
 export class MessageComponent implements OnInit {
 
-  messages: Observable<IMessage[]>;
+  messages: IMessage[];
 
   constructor(private messagesService: MessagesService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.messages = this.messagesService.getMessages();
+    this.messagesService.getMessages().subscribe(value => {
+      this.messages = value
+    })
   }
 
   delete(id: string) {
