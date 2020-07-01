@@ -2,7 +2,8 @@
   <mat-card class="example-card" *ngFor="let promo of promos">
     <mat-card-header>
       <mat-card-title class="promo-title">{{promo.promoName}}</mat-card-title>
-      <mat-card-subtitle class="promo-sub">From {{promo.startDate.toDate() | date:'mediumDate'}} to {{promo.endDate.toDate() | date:'mediumDate'}}
+      <mat-card-subtitle class="promo-sub">From {{promo.startDate.toDate() | date:'mediumDate'}} to
+        {{promo.endDate.toDate() | date:'mediumDate'}}
       </mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image [src]="promo.imageUrl" alt="Photo of a Shiba Inu">
@@ -20,14 +21,15 @@
     </mat-card-actions>
   </mat-card>
 
-  <mat-card class="example-card" *ngIf="!promos || promos.length < 1">
-    <mat-card-header>
+
+  <mat-card class="order-card" *ngIf="!promos || promos.length < 1">
+    <mat-card-header class="mat-card-header">
       <mat-card-title class="promo-title">
-        <mat-icon>calendar_today</mat-icon>
+        <mat-icon class="calendar-icon">caampaign</mat-icon>
       </mat-card-title>
     </mat-card-header>
     <mat-card-content class="content">
-      <h1><b>NO EVENTS YET</b></h1>
+      <h1><b>NO PRESENT PROMOS</b></h1>
     </mat-card-content>
   </mat-card>
 

@@ -1,15 +1,47 @@
-button{
-    margin-right: 10px;
-    background: rgb(239, 239, 239);
-    border: none;
-    color: var(--brandcolor);
-    font-size: 21px;
-    border-radius: 15px;
-    padding: 3px 12px 1px 12px;
+button {
+  margin-right: 10px;
+  background: rgb(239, 239, 239);
+  border: none;
+  color: var(--brandcolor);
+  font-size: 21px;
+  border-radius: 15px;
+  padding: 3px 12px 1px 12px;
 }
 
-span{
-    position: relative;
-    top: -5px;
-    font-size: 14px;
+span {
+  position: relative;
+  top: -5px;
+  font-size: 14px;
+}
+
+/* No Orders */
+.order-card {
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 30px 10px;
+}
+
+.mat-card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-icon {
+  font-size: 36px;
+}
+
+.content {
+  text-align: center;
+}
+
+.calendar-icon {
+  color: var(--brandcolor);
+}
+
+@media (min-width: 768px) {
+  .order-card {
+    width: 40%;
+  }
 }

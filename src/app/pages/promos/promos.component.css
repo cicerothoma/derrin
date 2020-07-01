@@ -61,6 +61,17 @@
   align-items: center;
 }
 
+.mat-card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-icon {
+  font-size: 36px;
+}
+
 @media (max-width: 420px) {
   .example-card {
     width: 87%;

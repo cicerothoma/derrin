@@ -181,6 +181,17 @@ section {
 }
 /* If you don't want the footer to be responsive, remove these media queries */
 
+.contact {
+  text-decoration: none !important;
+  color: var(--brandcolor) !important;
+}
+
+.footer-center .fa {
+  font-size: 15px;
+  color: var(--brandcolor);
+  margin-right: 3px;
+}
+
 @media (max-width: 880px) {
   .footer-distributed {
     font: bold 14px sans-serif;
