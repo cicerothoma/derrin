@@ -1,16 +1,21 @@
 <div class="order">
+    <div class="closediv">
+        <button class="close" mat-button (click)="onNoClick()" cdkFocusInitial>
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
     <img [src]="data.productImageUrl" class="productImg" alt="Product Image">
     <h1><b>{{data.productName}}</b></h1>
-    <h2 class="price">₦{{data.productPrice}}</h2>
-    <h2 class="price">₦{{totalPrice}}</h2>
+    <h2 class="price"><span>Unit Price: </span>₦{{data.productPrice}}</h2>
+    <h2 class="price"><span>Total Price: </span>₦{{totalPrice}}</h2>
 
     <form class="example-form" [formGroup]="orderForm">
         <mat-form-field class="example-full-width">
-          <mat-label>Name</mat-label>
-          <input matInput type="text" formControlName="name" placeholder="Enter Fullname">
-          <mat-error *ngIf="orderForm.get('name').invalid">{{getErrorMessage('name')}}</mat-error>
+            <mat-label>Name</mat-label>
+            <input matInput type="text" formControlName="name" placeholder="Enter Fullname">
+            <mat-error *ngIf="orderForm.get('name').invalid">{{getErrorMessage('name')}}</mat-error>
         </mat-form-field>
-      
+
         <mat-form-field class="example-full-width">
             <mat-label>Phone Number</mat-label>
             <input type="tel" formControlName="phone" matInput placeholder="0815-555-8888">
@@ -20,16 +25,15 @@
 
         <mat-form-field class="example-full-width">
             <mat-label>Quantity</mat-label>
-            <input type="number" formControlName="quantity" (keyup)="updatePrice()" matInput placeholder="Enter Quantity">
+            <input type="number" formControlName="quantity" (keyup)="updatePrice()" matInput
+                placeholder="Enter Quantity">
             <mat-error *ngIf="orderForm.get('quantity').invalid">{{getErrorMessage('quantity')}}</mat-error>
         </mat-form-field>
 
-        </form>
-        
-        <!-- <button>Check Out</button> -->
-        <div mat-dialog-actions>
-          <button mat-button (click)="onNoClick()">Cancel</button>
-          <button mat-button (click)="order()" cdkFocusInitial>Confirm Order</button>
-        
+    </form>
+
+    <!-- <button>Check Out</button> -->
+    <div mat-dialog-actions>
+        <button mat-button (click)="order()">Order</button>
     </div>
 </div>

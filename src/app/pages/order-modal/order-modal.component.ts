@@ -72,6 +72,10 @@ export class OrderModalComponent implements OnInit {
           duration: 6000
         })
 
+      } else {
+        this.matSnackbar.open('Form Not Valid', 'Close', {
+          duration: 3000
+        })
       }
     } catch (error) {
       this.matSnackbar.open(error.message, 'Close', {

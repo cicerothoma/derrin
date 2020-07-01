@@ -19,7 +19,7 @@
     </mat-list-item>
 </mat-list>
 
-<mat-card *ngIf="messages.length < 1 || !messages" class="order-card">
+<mat-card *ngIf="!messages || messages.length < 1" class="order-card">
     <mat-card-header class="mat-card-header">
         <mat-card-title class="promo-title">
             <mat-icon class="calendar-icon">mail</mat-icon>

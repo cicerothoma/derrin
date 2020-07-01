@@ -18,7 +18,7 @@
   </mat-list-item>
 </mat-list>
 
-<mat-card *ngIf="products.length < 1 || !products" class="order-card">
+<mat-card *ngIf="!products || products.length < 1" class="order-card">
   <mat-card-header class="mat-card-header">
     <mat-card-title class="promo-title">
       <mat-icon class="calendar-icon">cake</mat-icon>
