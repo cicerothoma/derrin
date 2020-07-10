@@ -1,1 +1,7 @@
-<p>{{data.name}}</p>
+<p>From: {{data.name}}</p>
+<p>Sender Email: {{data.email}}</p>
+<p>Date Sent: {{data.date | date:'medium'}}</p>
+<p>Message {{data.message}}</p>
+
+<button (click)="replyMail(data.email)">Reply Message</button>
+<button (click)="close()">Close</button>

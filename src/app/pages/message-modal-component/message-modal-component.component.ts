@@ -15,4 +15,12 @@ export class MessageModalComponentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  replyMail(email) {
+    window.location.href = `mailto:${email}`
+  }
+
+  close() {
+    this.dialogRef.close()
+  }
+
 }
