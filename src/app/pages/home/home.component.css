@@ -287,3 +287,46 @@ textarea {
     width: 100%;
   }
 }
+
+@media (max-width: 480px) {
+  #about img {
+    width: 100%;
+    text-align: center;
+    /* width: 90%; */
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-con {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  #about img {
+    width: 100%;
+    margin-top: 27px;
+  }
+  .contact-form {
+    width: 80%;
+  }
+  #about .flexDiv {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+  }
+  #about .flexDiv .writeUp {
+    width: auto;
+  }
+}
