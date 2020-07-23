@@ -1,52 +1,51 @@
-
-img{
-    width: 230px;
-    margin: 0 auto;
+img {
+  width: 230px;
+  margin: 0 auto;
 }
 
-.imageDiv{
-    margin: 0 auto;
-    text-align: center;
+.imageDiv {
+  margin: 0 auto;
+  text-align: center;
 }
 
-h3{
-    font-size: 18px;
-    font-family: 'Montserrat', sans-serif; 
-    margin-bottom: 10px;
+h3 {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0px;
 }
 
-.actions{
-    justify-content: space-between;
+.actions {
+  justify-content: space-between;
 }
 
-.actions button{
-    color: var(--brandcolor);
-    border: none;
-    padding: 9px 15px;
-    border-radius: 15px;
+.actions button {
+  color: var(--brandcolor);
+  border: none;
+  padding: 9px 10px;
+  border-radius: 15px;
 }
 
-.actions span{
-    top: -6px;
-    position: relative;
-    padding: 3px;
+.actions span {
+  top: -6px;
+  position: relative;
+  padding: 3px;
 }
 
-.price{
-    color: var(--brandcolor);
+.price {
+  color: var(--brandcolor);
 }
 
-@media(max-width: 320px){
-    .actions {
-        padding: 8px 0;
-        display: flex;
-        flex-wrap: wrap;
-        min-height: 0px;
-        align-items: center;
-        margin-bottom: -24px;
-    }
+@media (max-width: 320px) {
+  .actions {
+    padding: 8px 0;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 0px;
+    align-items: center;
+    margin-bottom: -10px;
+  }
 
-    h3{
-        font-size: 15px;
-    }
+  h3 {
+    font-size: 15px;
+  }
 }
