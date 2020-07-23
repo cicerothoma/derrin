@@ -1,3 +1,7 @@
+.mat-dialog-container {
+  height: 20px !important;
+}
+
 .productImg {
   width: 180px;
 }

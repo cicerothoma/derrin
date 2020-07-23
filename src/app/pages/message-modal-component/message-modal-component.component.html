@@ -3,5 +3,11 @@
 <p>Date Sent: {{data.date | date:'medium'}}</p>
 <p>Message {{data.message}}</p>
 
-<button (click)="replyMail(data.email)">Reply Message</button>
-<button (click)="close()">Close</button>
+<div class="actions">
+    <button mat-button (click)="replyMail(data.email)" cdkFocusInitial>
+        <mat-icon>email</mat-icon><span>Reply Mail</span>
+    </button>
+    <button mat-button (click)="close()">
+        <mat-icon>cancel</mat-icon><span>Close</span>
+    </button>
+</div>

@@ -237,7 +237,7 @@ textarea {
   }
 
   .service-con {
-    display: none;
+    display: none !important;
   }
 
   header .content {
