@@ -1,7 +1,7 @@
-<p>From: {{data.name}}</p>
-<p>Sender Email: {{data.email}}</p>
-<p>Date Sent: {{data.date | date:'medium'}}</p>
-<p>Message {{data.message}}</p>
+<p><b>From:</b> {{data.name}}</p>
+<p><b>Sender Email:</b> {{data.email}}</p>
+<p><b>Date Sent:</b> {{data.date | date:'medium'}}</p>
+<p><b>Message:</b> {{data.message}}</p>
 
 <div class="actions">
     <button mat-button (click)="replyMail(data.email)" cdkFocusInitial>

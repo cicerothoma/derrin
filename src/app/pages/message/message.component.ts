@@ -27,7 +27,7 @@ export class MessageComponent implements OnInit {
 
   openDialog(data: IMessage) {
     this.dialog.open(MessageModalComponentComponent, {
-      maxHeight: '80%',
+      height: '80%',
       data: data,
     })
   }

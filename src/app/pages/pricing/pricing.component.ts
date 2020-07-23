@@ -23,7 +23,7 @@ export class PricingComponent implements OnInit {
   openDialog(data: IProduct): void {
     this.dialog.open(OrderModalComponent, {
       data: data,
-      maxHeight: '80%'
+      height: '80%'
     });
 
   }
