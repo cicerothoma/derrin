@@ -32,7 +32,6 @@ export class HomeComponent implements OnInit {
     },
     autoplay: true,
     autoplayTimeout: 1000,
-    autoplayHoverPause: true,
     center: true
   }
 
