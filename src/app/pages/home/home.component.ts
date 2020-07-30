@@ -14,8 +14,11 @@ export class HomeComponent implements OnInit {
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
+    autoplay: true,
     dots: false,
     navText: ['', ''],
+    autoplayTimeout: 1000,
+    center: true,
     responsive: {
       0: {
         items: 1
@@ -30,9 +33,6 @@ export class HomeComponent implements OnInit {
         items: 4
       }
     },
-    autoplay: true,
-    autoplayTimeout: 1000,
-    center: true
   }
 
   contactUsForm: FormGroup;
