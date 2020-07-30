@@ -5,6 +5,7 @@
 .productImg {
   width: 100%;
   border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 .price {
@@ -19,6 +20,7 @@
 .closediv {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 10px;
 }
 
 .close {
@@ -48,7 +50,7 @@ button {
   color: #fff;
   width: 70%;
   margin: 7px auto;
-  padding: 7px 15px;
+  padding: 10px 15px;
   border-radius: 15px;
   border: none;
   margin-top: 10px;
@@ -56,4 +58,10 @@ button {
 
 .example-full-width {
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  button {
+    width: 20%;
+  }
 }
