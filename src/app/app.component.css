@@ -6,7 +6,6 @@ mat-sidenav {
 
 mat-toolbar {
   background: #fafafa;
-  position: fixed;
   display: flex;
   justify-content: space-between;
   padding: 0 125px;
