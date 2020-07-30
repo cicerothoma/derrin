@@ -2,18 +2,20 @@
     <div class="content-heading">
         <h1>Our Pricing</h1>
     </div>
+    <mat-spinner *ngIf="isLoading === true" color="accent"></mat-spinner>
+    <!-- <mat-spinner></mat-spinner> -->
 
-    <div class="pricing" *ngFor="let product of (productsSub | async)">    
-            <div class="content">
-                <div class="image-content">
-                    <img [src]="product.productImageUrl" alt="Product Image">
-                </div>
-                <div class="info">
-                    <p>{{product.productName}}</p>
-                    <b>₦{{product.productPrice}}</b>
-                </div>
-                <button (click)="openDialog(product)">Order Now</button>
+    <div class="pricing" *ngFor="let product of products">
+        <div *ngIf="isLoading === false" class="content">
+            <div class="image-content">
+                <img [src]="product.productImageUrl" alt="Product Image">
             </div>
+            <div class="info">
+                <p>{{product.productName}}</p>
+                <b>₦{{product.productPrice}}</b>
+            </div>
+            <button (click)="openDialog(product)">Order Now</button>
+        </div>
     </div>
 
 </div>

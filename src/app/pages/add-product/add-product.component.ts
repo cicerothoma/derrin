@@ -37,9 +37,10 @@ export class AddProductComponent implements OnInit {
   }
 
   fileUpload(event) {
-    const { productName } = this.productForm.value;
+    // const { productName } = this.productForm.value;
+    const randomId = Math.random().toString(36).substring(2);
     const file = event.target.files[0];
-    const filePath: string = `productImages/${productName}`;
+    const filePath: string = `productImages/${randomId}`;
     const fileRef: AngularFireStorageReference = this.afStorage.ref(filePath);
     const task: AngularFireUploadTask = this.afStorage.upload(filePath, file);
 

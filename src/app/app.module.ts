@@ -48,6 +48,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FooterComponent } from './pages/footer/footer.component';
 import { MessageModalComponentComponent } from './pages/message-modal-component/message-modal-component.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 
@@ -100,7 +101,8 @@ import { MessageModalComponentComponent } from './pages/message-modal-component/
     MatSnackBarModule,
     MatDialogModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatProgressSpinnerModule
   ],
   entryComponents: [
     OrderModalComponent,
