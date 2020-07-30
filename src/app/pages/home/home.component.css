@@ -8,6 +8,7 @@ header .content {
   justify-content: space-around;
   padding: 80px 5px;
   flex-wrap: wrap;
+  margin-top: 35px;
 }
 
 header .writeUp {
@@ -217,43 +218,6 @@ textarea {
   margin: 25px auto;
 }
 
-@media (max-width: 520px) {
-  header img {
-    width: 100% !important;
-  }
-
-  #about .flexDiv {
-    display: block;
-  }
-
-  #about img {
-    width: 400px;
-  }
-
-  .flexDiv .writeUp {
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .service-con {
-    display: none !important;
-  }
-
-  header .content {
-    padding-bottom: 0;
-  }
-
-  .contact-form {
-    width: 90%;
-  }
-
-  .donut {
-    margin: 100px auto;
-    margin-bottom: 10px;
-  }
-}
-
 @media (min-width: 400px) {
   owl-carousel-o {
     display: none;
@@ -270,7 +234,7 @@ textarea {
   }
 
   .service-con {
-    display: flex;
+    display: flex !important;
   }
 
   .cake {
@@ -328,5 +292,42 @@ textarea {
   }
   #about .flexDiv .writeUp {
     width: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  header img {
+    width: 100% !important;
+  }
+
+  #about .flexDiv {
+    display: block;
+  }
+
+  #about img {
+    width: 400px;
+  }
+
+  .flexDiv .writeUp {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .service-con {
+    display: none !important;
+  }
+
+  header .content {
+    padding-bottom: 0;
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+
+  .donut {
+    margin: 100px auto;
+    margin-bottom: 10px;
   }
 }
